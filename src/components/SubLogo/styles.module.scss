@@ -1,0 +1,87 @@
+@use '../../Constants/styles/variables' as v;
+
+.boxLogo {
+  position: relative;
+  width: 100px;
+  height: 41px;
+  display: flex;
+  align-items: center;
+}
+
+.c {
+  width: 15px;
+  height: 15px;
+  content: '';
+  border-radius: 50%;
+  border: 4px solid v.$turquoise;
+  margin-right: 2px;
+  position: relative;
+
+  &:after {
+    height: 50%;
+    width: 70%;
+    top: 50%;
+    margin-top: -25%;
+    content: '';
+    right: -45%;
+    background-color: v.$darkGreen;
+    position: absolute;
+  }
+}
+
+.l {
+  width: 4px;
+  height: 100%;
+  background-color: v.$turquoise;
+  margin: 0 1px;
+}
+
+.o {
+  height: 10px;
+  width: 10px;
+  content: '';
+  border-radius: 50%;
+  box-shadow: 0px 0px 0px 4px v.$turquoise;
+  margin: 0 6px 0 6px;
+}
+
+.n {
+  border-color: v.$turquoise !important; /* Change colour here */
+  border-style: solid;
+  border-width: 4px;
+  border-bottom: none;
+  border-radius: 0 12px 0 0;
+  height: 19px;
+  width: 8px;
+}
+
+.e {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  content: '';
+  border: 4px solid v.$turquoise;
+  position: relative;
+  margin-left: 2px;
+
+  &:before {
+    width: 100%;
+    height: 4px;
+    content: '';
+    background-color: v.$darkGreen;
+    position: absolute;
+    top: 65%;
+    right: -50%;
+  }
+
+  &:after {
+    width: 120%;
+    height: 4px;
+    content: '';
+    background-color: v.$turquoise;
+    position: absolute;
+    top: 57%;
+    right: 40%;
+    transform: translate(50%, -50%)
+  }
+}

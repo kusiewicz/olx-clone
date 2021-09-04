@@ -1,0 +1,14 @@
+@use '../../Constants/styles/variables' as v;
+
+.topBanner {
+  background-color: v.$darkGreen;
+  padding: 0 12px;
+  position: relative;
+  height: 71px;
+  display: flex;
+  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+}
