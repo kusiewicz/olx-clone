@@ -11,12 +11,6 @@
 
 /* ----------- */
 
-.boxLogo {
-  width: 71px;
-  height: 41px;
-  position: relative;
-}
-
 .o {
   position: absolute;
   height: 10px;
@@ -75,8 +69,6 @@
   }
 }
 
-:global {
-  .logo > .turquoise {
-    @include colorway($color: v.$turquoise);
-  }
+.turquoise {
+  @include colorway($color: v.$turquoise);
 }

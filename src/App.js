@@ -1,6 +1,6 @@
 import React from 'react';
-import { NavBar } from './Containers';
+import { Home } from './Pages';
 
-const App = () => <NavBar />;
+const App = () => <Home />;
 
 export default App;

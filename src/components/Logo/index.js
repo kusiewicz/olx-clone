@@ -1,17 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './styles.module.scss';
 
-const Logo = (props) => {
-  // eslint-disable-next-line react/prop-types
-  const { color } = props;
+const Logo = ({ color }) => (
+  <>
+    <span className={`${styles.o} ${styles[color]}`} />
+    <span className={`${styles.l} ${styles[color]}`} />
+    <span className={`${styles.x} ${styles[color]}`} />
+  </>
+);
 
-  return (
-    <div className={`${styles.boxLogo} logo`}>
-      <span className={`${styles.o} ${color}`} />
-      <span className={`${styles.l} ${color}`} />
-      <span className={`${styles.x} ${color}`} />
-    </div>
-  );
+Logo.propTypes = {
+  color: PropTypes.string,
 };
 
 export default Logo;

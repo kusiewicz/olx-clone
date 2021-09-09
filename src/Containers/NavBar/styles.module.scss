@@ -1,14 +1,45 @@
 @use '../../Constants/styles/variables' as v;
 
-.topBanner {
+.nav {
   background-color: v.$darkGreen;
-  padding: 0 12px;
-  position: relative;
-  height: 71px;
-  display: flex;
-  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 72px;
+  position: fixed;
 }
 
 .wrapper {
-  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.userPanel {
+  color: white;
+}
+
+.heartIcon {
+  margin-right: 40px;
+  font-size: 18px;
+  top: 1px;
+}
+
+.userIcon {
+  margin-right: 10px;
+  font-size: 19px;
+}
+
+.olxText {
+  bottom: 1px;
+}
+
+.btn {
+  margin-left: 36px;
+}
+
+.hover {
+  &:hover {
+    color: #7f9799;
+  }
 }

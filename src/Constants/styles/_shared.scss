@@ -1,0 +1,142 @@
+@use './variables' as v;
+
+/* Icons ------------------------------------------------------------------------- */
+
+[class^='icon-']:before,
+[class*=' icon-']:before {
+  font-family: 'fontello';
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: 0.2em;
+
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-heart-empty-2:before {
+  content: '\e800';
+} /* '' */
+.icon-heart-empty:before {
+  content: '\e801';
+} /* '' */
+.icon-location-outline:before {
+  content: '\e802';
+} /* '' */
+.icon-search-1:before {
+  content: '\e803';
+} /* '' */
+.icon-cancel:before {
+  content: '\e804';
+} /* '' */
+.icon-up-open-big:before {
+  content: '\e805';
+} /* '' */
+.icon-right-open-big:before {
+  content: '\e806';
+} /* '' */
+.icon-left-open-big:before {
+  content: '\e807';
+} /* '' */
+.icon-down-open-big:before {
+  content: '\e808';
+} /* '' */
+.icon-heart-empty-1:before {
+  content: '\e809';
+} /* '' */
+.icon-user-o:before {
+  content: '\f2c0';
+} /* '' */
+
+/*----------------------------------------------------------------*/
+
+@font-face {
+  font-family: 'Geomanist';
+  src: local('Geomanist'), url('../../Assets/Fonts/geomanist-medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Geomanist-Book';
+  src: local('Geomanist-Book'), url('../../Assets/Fonts/geomanist-book.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'fontello';
+  src: url('../../Assets/Fonts/fontello.eot?47891031');
+  src: url('../../Assets/Fonts/fontello.eot?47891031#iefix') format('embedded-opentype'),
+    url('../../Assets/Fonts/fontello.woff2?47891031') format('woff2'),
+    url('../../Assets/Fonts/fontello.woff?47891031') format('woff'),
+    url('../../Assets/Fonts/fontello.ttf?47891031') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: 'Geomanist', Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  list-style: none;
+  text-decoration: none;
+  list-style: none;
+  color: v.$darkGreen;
+}
+
+.rel {
+  position: relative;
+}
+
+.flex {
+  display: flex;
+}
+
+.cntr {
+  justify-content: center;
+  align-items: center;
+}
+
+.indent {
+  width: 1286px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (max-width: 1440px) {
+    width: 1099px;
+  }
+}
