@@ -1,10 +1,11 @@
 import React from 'react';
 
-import { NavBar } from '../Containers';
+import { NavBar, Search } from '../Containers';
 
 const Home = () => (
   <>
     <NavBar />
+    <Search />
   </>
 );
 

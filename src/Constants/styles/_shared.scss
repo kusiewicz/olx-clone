@@ -12,7 +12,7 @@
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
-  margin-right: 0.2em;
+  margin-right: 0;
   text-align: center;
   /* opacity: .8; */
 
@@ -25,7 +25,7 @@
 
   /* Animation center compensation - margins should be symmetric */
   /* remove if not needed */
-  margin-left: 0.2em;
+  margin-left: 0;
 
   /* you can be more comfortable with increased icons size */
   /* font-size: 120%; */
@@ -38,36 +38,60 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
-.icon-heart-empty-2:before {
+.icon-search:before {
   content: '\e800';
 } /* '' */
-.icon-heart-empty:before {
+.icon-search-1:before {
   content: '\e801';
 } /* '' */
-.icon-location-outline:before {
+.icon-heart-empty:before {
   content: '\e802';
 } /* '' */
-.icon-search-1:before {
+.icon-location:before {
   content: '\e803';
 } /* '' */
-.icon-cancel:before {
+.icon-location-outline:before {
   content: '\e804';
 } /* '' */
-.icon-up-open-big:before {
+.icon-star:before {
   content: '\e805';
 } /* '' */
-.icon-right-open-big:before {
+.icon-star-empty:before {
   content: '\e806';
 } /* '' */
-.icon-left-open-big:before {
+.icon-inbox:before {
   content: '\e807';
 } /* '' */
-.icon-down-open-big:before {
+.icon-inbox-alt:before {
   content: '\e808';
 } /* '' */
-.icon-heart-empty-1:before {
+.icon-attach:before {
   content: '\e809';
 } /* '' */
+.icon-truck:before {
+  content: '\e80a';
+} /* '' */
+.icon-down-open-big:before {
+  content: '\e80b';
+} /* '' */
+.icon-down-open-mini:before {
+  content: '\e80c';
+} /* '' */
+.icon-right-open-big:before {
+  content: '\e80d';
+} /* '' */
+.icon-right-open-mini:before {
+  content: '\e80e';
+} /* '' */
+.icon-plus:before {
+  content: '\e80f';
+} /* '' */
+.icon-cancel:before {
+  content: '\e810';
+} /* '' */
+.icon-info-circled-alt:before {
+  content: '\f086';
+} /* '' */
 .icon-user-o:before {
   content: '\f2c0';
 } /* '' */
@@ -85,6 +109,21 @@
 }
 
 @font-face {
+  font-family: 'Geomanist-Light';
+  src: local('Geomanist-Book'), url('../../Assets/Fonts/geomanist-light.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Geomanist-Thin';
+  src: local('Geomanist-Book'), url('../../Assets/Fonts/geomanist-thin.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Geomanist-ExtraLight';
+  src: local('Geomanist-Book'), url('../../Assets/Fonts/geomanist-extralight.woff2') format('woff2');
+}
+
+@font-face {
   font-family: 'fontello';
   src: url('../../Assets/Fonts/fontello.eot?47891031');
   src: url('../../Assets/Fonts/fontello.eot?47891031#iefix') format('embedded-opentype'),
@@ -97,6 +136,10 @@
 
 * {
   font-family: 'Geomanist', Arial, sans-serif;
+}
+
+body {
+  background-color: v.$backgroundGrey;
 }
 
 h1,
@@ -116,6 +159,10 @@ a {
   text-decoration: none;
   list-style: none;
   color: v.$darkGreen;
+}
+
+*:focus {
+  outline: none;
 }
 
 .rel {
@@ -140,3 +187,36 @@ a {
     width: 1099px;
   }
 }
+
+/* -------------- */
+
+%cancelSignBeforeAfter {
+  height: 110%;
+  position: absolute;
+  content: '';
+  width: 1.5px;
+  background-color: v.$darkGreen;
+}
+
+.cancelSign {
+  width: 27px;
+  height: 27px;
+  position: relative;
+  border: 1px solid white;
+  border-radius: 50%;
+  content: '';
+  overflow: hidden;
+  transform: rotate(45deg);
+
+  &:before {
+    @extend %cancelSignBeforeAfter;
+    transform: translate(13px);
+  }
+
+  &:after {
+    @extend %cancelSignBeforeAfter;
+    transform: rotate(90deg) translate(-1px, -12px);
+  }
+}
+
+/* --------------------------- */

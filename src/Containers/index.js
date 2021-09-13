@@ -1,2 +1,2 @@
 export { default as NavBar } from './NavBar';
-export { default as SearchBox } from './SearchBox';
+export { default as Search } from './Search';

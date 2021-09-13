@@ -1,0 +1,83 @@
+@use '../../Constants/styles/variables' as v;
+
+/* containers */
+
+%inputFields {
+  height: 56px;
+  padding: 8px 0;
+  border: none;
+}
+
+/* ----------- */
+
+.searchSection {
+  padding: 40px 0;
+}
+
+.searchMainContainer,
+.locationContainer,
+.searchBtnContainer {
+  background-color: white;
+}
+
+.searchBtnContainer {
+  width: 13%;
+
+  &:hover {
+    background-color: v.$darkGreen;
+    color: white;
+
+    span {
+      color: white;
+    }
+  }
+}
+
+.searchMainContainer {
+  width: 61%;
+  border-right: 1px solid v.$backgroundGrey;
+}
+
+.locationContainer {
+  width: 26%;
+}
+
+.searchBtnContainer {
+  @extend %inputFields;
+}
+
+
+.searchMainField {
+  @extend %inputFields;
+  width: 80%;
+  margin-right: auto;
+}
+
+.locationField {
+  @extend %inputFields;
+  width: 57%;
+}
+
+.searchIcon1 {
+  font-size: 26px;
+  padding: 0 20px;
+}
+
+.searchIcon2 {
+  font-size: 26px;
+  margin-left: 8px;
+}
+
+.locationIcon {
+  font-size: 20px;
+  padding: 0 17px;
+  margin-left: 3px;
+}
+
+.cancelIcon1 {
+  margin-right: 19px;
+}
+
+.cancelIcon2 {
+  margin: 0 15px;
+}

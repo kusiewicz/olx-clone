@@ -1,6 +1,10 @@
 import React from 'react';
 import { Home } from './Pages';
 
-const App = () => <Home />;
+const App = () => (
+  <>
+    <Home />
+  </>
+);
 
 export default App;
