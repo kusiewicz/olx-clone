@@ -1,15 +1,21 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
-import styles from './styles.module.scss';
-
-const SearchBox = ({ className, text }) => (
-  <input type="text" className={`${styles.search} ${className}`} placeholder={text} />
+const SearchBox = ({ className, placeholder, value, onChange }) => (
+  <input
+    type="text"
+    className={className}
+    placeholder={placeholder}
+    value={value}
+    onChange={onChange}
+  />
 );
 
 SearchBox.propTypes = {
   className: propTypes.string,
-  text: propTypes.string,
+  placeholder: propTypes.string,
+  value: propTypes.string,
+  onChange: propTypes.func,
 };
 
 export default SearchBox;

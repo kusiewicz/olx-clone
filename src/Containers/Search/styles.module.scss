@@ -6,9 +6,15 @@
   height: 56px;
   padding: 8px 0;
   border: none;
+  color: v.$darkGreen;
+  margin-right: auto;
 }
 
 /* ----------- */
+
+i {
+  color: v.$darkGreen;
+}
 
 .searchSection {
   padding: 40px 0;
@@ -30,6 +36,10 @@
     span {
       color: white;
     }
+
+    i {
+      color: white;
+    }
   }
 }
 
@@ -46,16 +56,14 @@
   @extend %inputFields;
 }
 
-
 .searchMainField {
   @extend %inputFields;
   width: 80%;
-  margin-right: auto;
 }
 
 .locationField {
   @extend %inputFields;
-  width: 57%;
+  width: 60%;
 }
 
 .searchIcon1 {
@@ -74,10 +82,12 @@
   margin-left: 3px;
 }
 
-.cancelIcon1 {
+.searchCancelIcon {
   margin-right: 19px;
+  display: none;
 }
 
-.cancelIcon2 {
+.locationCancelIcon {
   margin: 0 15px;
+  display: none;
 }

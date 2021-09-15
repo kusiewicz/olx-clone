@@ -165,6 +165,16 @@ a {
   outline: none;
 }
 
+::placeholder {
+  font-family: Geomanist-ExtraLight;
+  color: v.$darkGreen;
+  font-weight: 600;
+}
+
+.visible {
+  display: block;
+}
+
 .rel {
   position: relative;
 }
@@ -176,6 +186,10 @@ a {
 .cntr {
   justify-content: center;
   align-items: center;
+}
+
+.white {
+  color: white;
 }
 
 .indent {

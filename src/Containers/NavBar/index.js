@@ -14,9 +14,9 @@ const NavBar = () => (
           <SubLogo />
         </a>
         <Container className={`${styles.userPanel} flex cntr`}>
-          <Icon className={`icon-heart-empty ${styles.heartIcon} ${styles.hover} rel`} />
+          <Icon className={`icon-heart-empty white ${styles.heartIcon} ${styles.hover} rel`} />
           <Container className={styles.hover}>
-            <Icon className={`icon-user-o ${styles.userIcon}`} />
+            <Icon className={`icon-user-o white ${styles.userIcon}`} />
             <span className={`${styles.olxText} rel`}>Mój OLX</span>
           </Container>
           <HoverButton className={styles.btn}>Dodaj ogłoszenie</HoverButton>
