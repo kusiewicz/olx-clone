@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import classnames from 'classnames';
-import { Container, SearchBox, HoverButton, Icon } from '../../Components';
+import { Container, SearchBox, HoverButton, Icon, Tooltip } from '../../Components';
 
 import styles from './styles.module.scss';
 
@@ -32,7 +32,8 @@ const Search = () => {
         <Icon className={cancelIcon} onClick={() => setSearchText('')} />
       </Container>
 
-      <Container className={`${styles.locationContainer} flex cntr`}>
+      <Container className={`${styles.locationContainer} flex cntr rel`}>
+        <Tooltip className={styles.tooltip} tooltipText="Wybierz miasto lub kod pocztowy" />
         <Icon className={`icon-location-outline ${styles.locationIcon}`} />
         <SearchBox
           value={locationText}
