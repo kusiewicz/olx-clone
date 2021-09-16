@@ -175,6 +175,10 @@ a {
   display: block;
 }
 
+.invisible {
+  display: none !important;
+}
+
 .rel {
   position: relative;
 }
@@ -212,11 +216,10 @@ a {
   background-color: v.$darkGreen;
 }
 
-.cancelSign {
-  width: 27px;
-  height: 27px;
+@mixin cancelSign($height, $width) {
+  width: $width;
+  height: $height;
   position: relative;
-  border: 1px solid white;
   border-radius: 50%;
   content: '';
   overflow: hidden;
@@ -224,12 +227,10 @@ a {
 
   &:before {
     @extend %cancelSignBeforeAfter;
-    transform: translate(13px);
   }
 
   &:after {
     @extend %cancelSignBeforeAfter;
-    transform: rotate(90deg) translate(-1px, -12px);
   }
 }
 

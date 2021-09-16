@@ -1,5 +1,5 @@
 @use '../../Constants/styles/variables' as v;
-
+@use '../../Constants/styles/shared' as *;
 /* containers */
 
 %inputFields {
@@ -82,14 +82,26 @@ i {
   margin-left: 3px;
 }
 
+.searchCancelIcon,
+.locationCancelIcon {
+  @include cancelSign(27px, 27px);
+  margin: 0 15px;
+
+  &:before {
+    transform: translate(13px);
+  }
+
+  &:after {
+    transform: rotate(90deg) translate(-1px, -12px);
+  }
+}
+
 .searchCancelIcon {
   margin-right: 19px;
-  display: none;
 }
 
 .locationCancelIcon {
   margin: 0 15px;
-  display: none;
 }
 
 .tooltip {

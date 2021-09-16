@@ -1,0 +1,71 @@
+@use '../../Constants/styles/variables' as v;
+@use '../../Constants/styles/shared' as *;
+
+.container {
+  background-color: rgb(200, 248, 246);
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  margin: 10px 5px;
+  border-radius: 4px;
+  min-width: 1110px;
+  height: 40px;
+}
+
+.icon {
+  background: url('https://static.olx.pl/static/olxpl/packed/font/2f8c0a722248ad084d28fa935bc6673670.svg')
+    no-repeat center;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  background-size: contain;
+  margin-right: 16px;
+}
+
+.text {
+  color: v.$darkGreen;
+  font-size: 14px;
+  display: inline-block;
+  font-family: Geomanist-Light;
+  font-weight: 800;
+}
+
+.subText {
+  font-weight: 600;
+  font-size: 14px;
+  display: inline-block;
+  position: relative;
+  margin-right: 16px;
+  font-family: Geomanist-Book;
+  font-weight: 600;
+  bottom: 3px;
+
+  &::before {
+    border-bottom: 3px solid v.$darkGreen;
+    padding: 5px 0;
+    position: absolute;
+    content: '';
+    width: 100%;
+    top: 12px;
+    transition: all 0.15s ease;
+  }
+
+  &:hover {
+    &::before {
+      width: 50%;
+      margin-left: 25%;
+    }
+  }
+}
+
+.cancelIcon {
+  @include cancelSign(20px, 20px);
+
+  &::before {
+    transform: translate(9px);
+  }
+
+  &:after {
+    transform: rotate(90deg) translate(-1px, -9px);
+  }
+}
