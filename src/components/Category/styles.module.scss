@@ -1,0 +1,31 @@
+@use '../../Constants/styles/variables' as v;
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 39px;
+  flex-basis: 125px;
+  padding: 0 6px;
+
+  &:hover {
+    a {
+      color: white;
+      background-color: v.$darkGreen;
+    }
+  }
+}
+
+.image {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background-color: blue;
+  margin-bottom: 29px;
+}
+
+.caption {
+  font-size: 16px;
+  line-height: 1.25;
+}

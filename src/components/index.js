@@ -6,3 +6,4 @@ export { default as Icon } from './Icon';
 export { default as SearchBox } from './SearchBox';
 export { default as Tooltip } from './Tooltip';
 export { default as WarningBanner } from './WarningBanner';
+export { default as Category } from './Category';

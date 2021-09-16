@@ -26,8 +26,8 @@ const Search = () => {
         visibility={warningBanner}
         onClick={() => setWarningBanner((prevValue) => !prevValue)}
       />
-      <Container className={`${styles.searchSection} indent flex cntr`} id="search">
-        <Container className={`${styles.searchMainContainer} flex cntr`}>
+      <Container className={`indent flex cntr ${styles.searchSection}`} id="search">
+        <Container className={`flex cntr ${styles.searchMainContainer}`}>
           <Icon className={`icon-search ${styles.searchIcon1}`} />
           <SearchBox
             value={searchText}
@@ -38,7 +38,7 @@ const Search = () => {
           <Icon className={cancelIcon} onClick={() => setSearchText('')} />
         </Container>
 
-        <Container className={`${styles.locationContainer} flex cntr rel`}>
+        <Container className={`flex cntr rel ${styles.locationContainer} `}>
           <Tooltip className={styles.tooltip} tooltipText="Wybierz miasto lub kod pocztowy" />
           <Icon className={`icon-location-outline ${styles.locationIcon}`} />
           <SearchBox
@@ -50,7 +50,7 @@ const Search = () => {
           <Icon className={cancelIcon2} onClick={() => setLocationText('')} />
         </Container>
 
-        <Container className={`${styles.searchBtnContainer} flex cntr`}>
+        <Container className={`flex cntr ${styles.searchBtnContainer} `}>
           <HoverButton className={styles.searchBtn}>Szukaj</HoverButton>
           <Icon className={`icon-search ${styles.searchIcon2}`} />
         </Container>

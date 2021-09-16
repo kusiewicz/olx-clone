@@ -100,36 +100,36 @@
 
 @font-face {
   font-family: 'Geomanist';
-  src: local('Geomanist'), url('../../Assets/Fonts/geomanist-medium.woff2') format('woff2');
+  src: local('Geomanist'), url('/Assets/Fonts/geomanist-medium.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Geomanist-Book';
-  src: local('Geomanist-Book'), url('../../Assets/Fonts/geomanist-book.woff2') format('woff2');
+  src: local('Geomanist-Book'), url('/Assets/Fonts/geomanist-book.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Geomanist-Light';
-  src: local('Geomanist-Book'), url('../../Assets/Fonts/geomanist-light.woff2') format('woff2');
+  src: local('Geomanist-Light'), url('/Assets/Fonts/geomanist-light.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Geomanist-Thin';
-  src: local('Geomanist-Book'), url('../../Assets/Fonts/geomanist-thin.woff2') format('woff2');
+  src: local('Geomanist-Thin'), url('/Assets/Fonts/geomanist-thin.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Geomanist-ExtraLight';
-  src: local('Geomanist-Book'), url('../../Assets/Fonts/geomanist-extralight.woff2') format('woff2');
+  src: local('Geomanist-ExtraLight'), url('/Assets/Fonts/geomanist-extralight.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'fontello';
-  src: url('../../Assets/Fonts/fontello.eot?47891031');
-  src: url('../../Assets/Fonts/fontello.eot?47891031#iefix') format('embedded-opentype'),
-    url('../../Assets/Fonts/fontello.woff2?47891031') format('woff2'),
-    url('../../Assets/Fonts/fontello.woff?47891031') format('woff'),
-    url('../../Assets/Fonts/fontello.ttf?47891031') format('truetype');
+  src: url('/Assets/Fonts/fontello.eot?47891031');
+  src: url('/Assets/Fonts/fontello.eot?47891031#iefix') format('embedded-opentype'),
+    url('/Assets/Fonts/fontello.woff2?47891031') format('woff2'),
+    url('/Assets/Fonts/fontello.woff?47891031') format('woff'),
+    url('/Assets/Fonts/fontello.ttf?47891031') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -200,6 +200,8 @@ a {
   width: 1286px;
   margin-right: auto;
   margin-left: auto;
+  padding-right: 24px;
+  padding-left: 24px;
 
   @media (max-width: 1440px) {
     width: 1099px;
