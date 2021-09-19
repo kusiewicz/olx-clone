@@ -10,7 +10,7 @@
   border-radius: 3px;
 
   &:before {
-    content: attr(tooltipText);
+    content: attr(data);
     position: absolute;
     margin-top: 4px;
   }

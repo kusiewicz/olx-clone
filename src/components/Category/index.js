@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './styles.module.scss';
 
-const Category = ({ category, image }) => (
+const Category = ({ category, src, className }) => (
   <div className={styles.container}>
-    <img alt={category} className={styles.image} src={`${image}`} />
+    <img alt={category} className={`${className}`} src={src} />
     <a href="placeholder" className={styles.caption}>
       {category}
     </a>
@@ -13,7 +13,8 @@ const Category = ({ category, image }) => (
 
 Category.propTypes = {
   category: PropTypes.string,
-  image: PropTypes.string,
+  src: PropTypes.string,
+  className: PropTypes.string,
 };
 
 export default Category;

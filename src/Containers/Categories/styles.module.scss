@@ -1,3 +1,12 @@
+/* ------PLACEHOLDERS------ */
+
+%category {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  margin-bottom: 29px;
+}
+
 .container {
   background-color: white;
   padding-top: 56px;
@@ -6,4 +15,54 @@
 
 .categoryWrapper {
   flex-wrap: wrap;
+}
+
+.dzieci,
+.motoryzacja {
+  @extend %category;
+  background-color: #ffce32;
+}
+
+.oddam,
+.nieruchomosci {
+  @extend %category;
+  background-color: #3a77ff;
+}
+
+.zamienie,
+.praca {
+  @extend %category;
+  background-color: #23e5db;
+}
+
+.pracaDodatkowa,
+.dom {
+  @extend %category;
+  background-color: #ff5636;
+}
+
+.fixly,
+.noclegi,
+.elektronika {
+  @extend %category;
+  background-color: #fff6d9;
+}
+
+.przesylka1zl,
+.sport,
+.moda {
+  @extend %category;
+  background-color: #ceddff;
+}
+
+.muzyka,
+.rolnictwo {
+  @extend %category;
+  background-color: #c8f8f6;
+}
+
+.uslugi,
+.zwierzeta {
+  @extend %category;
+  background-color: #ffd6c9;
 }

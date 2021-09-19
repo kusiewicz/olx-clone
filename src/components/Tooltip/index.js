@@ -3,7 +3,7 @@ import propTypes from 'prop-types';
 import styles from './styles.module.scss';
 
 const Tooltip = ({ className, tooltipText }) => (
-  <span tooltipText={tooltipText} className={`${styles.tooltip} ${className}`} />
+  <span data={tooltipText} className={`${styles.tooltip} ${className}`} />
 );
 
 Tooltip.propTypes = {
