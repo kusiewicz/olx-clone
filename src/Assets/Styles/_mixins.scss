@@ -1,0 +1,27 @@
+@use './_variables' as v;
+
+%cancelSignBeforeAfter {
+  height: 110%;
+  position: absolute;
+  content: '';
+  width: 1.5px;
+  background-color: v.$darkGreen;
+}
+
+@mixin cancelSign($height, $width) {
+  width: $width;
+  height: $height;
+  position: relative;
+  border-radius: 50%;
+  content: '';
+  overflow: hidden;
+  transform: rotate(45deg);
+
+  &:before {
+    @extend %cancelSignBeforeAfter;
+  }
+
+  &:after {
+    @extend %cancelSignBeforeAfter;
+  }
+}

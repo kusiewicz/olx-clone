@@ -1,4 +1,4 @@
-@use '../../Assets/Styles/variables' as v;
+@use '../../Assets/Styles/_variables' as v;
 
 .container {
   display: flex;
@@ -15,8 +15,12 @@
       background-color: v.$darkGreen;
     }
   }
-}
 
+  @media (max-width: 1440px) {
+    flex-basis: 110px;
+    padding: 0 2px;
+  }
+}
 
 .caption {
   font-size: 16px;

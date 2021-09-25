@@ -11,15 +11,15 @@ const WarningBanner = ({ visibility, onClick }) => {
   );
 
   return (
-    <div className={BannerClassnames}>
-      <div className={`flex cntr ${styles.leftWrapper}`}>
+    <div className={BannerClassnames} id="warning">
+      <div className="flex cntr">
         <div className={styles.icon} />
         <p className={styles.text}>
           Nigdy nie podawaj danych karty bankowej, aby otrzymać pieniądze za przedmiot sprzedany z
           Przesyłką OLX!
         </p>
       </div>
-      <div className={`flex cntr ${styles.rightWrapper}`}>
+      <div className="flex cntr">
         <a href="https://blog.olx.pl/2020/06/18/uwaga-na-phishing/" className={styles.subText}>
           Dowiedz się więcej na blogu OLX
         </a>
