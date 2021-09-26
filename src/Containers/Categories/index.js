@@ -28,7 +28,7 @@ import {
 
 const Categories = () => {
   return (
-    <Container id="mainCategories" className={`${styles.container}`}>
+    <Container id="mainCategories" className={`${styles.categoriesContainer}`}>
       <h1 className={styles.title}>Kategorie główne</h1>
       <Container className={`${styles.categoryWrapper} flex indent`}>
         <Category category="Motoryzacja" className={styles.motoryzacja} src={motoryzacja} />

@@ -5,7 +5,7 @@ import styles from './styles.module.scss';
 
 const WarningBanner = ({ visibility, onClick }) => {
   const BannerClassnames = classnames(
-    `${styles.container}`,
+    `${styles.warningBannerContainer}`,
     'flex',
     visibility ? 'visible' : 'invisible'
   );

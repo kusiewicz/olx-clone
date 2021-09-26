@@ -1,12 +1,13 @@
 import React from 'react';
 
-import { NavBar, Search, Categories } from '../Containers';
+import { NavBar, Search, Categories, PromotedAds } from '../Containers';
 
 const Home = () => (
   <>
     <NavBar />
     <Search />
     <Categories />
+    <PromotedAds />
   </>
 );
 

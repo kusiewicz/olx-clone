@@ -1,0 +1,13 @@
+.promotedAdsContainer {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.title {
+  text-align: center;
+  font-size: 32px;
+  margin-top: 59px;
+  margin-bottom: 53px;
+  line-height: 1.06;
+}

@@ -1,0 +1,59 @@
+@use '../../Assets/Styles/_variables' as v;
+
+.adContainer {
+  height: 378px;
+  background-color: white;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.image {
+  height: 218px;
+  width: 100%;
+  line-height: 218px;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.title {
+  padding: 15px 0;
+  font-size: 16px;
+  line-height: 1.25;
+  font-family: Geomanist-Regular;
+  font-weight: 400;
+  color: v.$darkGreen;
+  margin-bottom: auto;
+}
+
+.location {
+  font-size: 12px;
+  line-height: 1.17;
+  margin-bottom: 10px;
+  font-family: Geomanist-Regular;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: v.$darkGreen;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: v.$darkGreen;
+  line-height: 16px;
+}
+
+.icon {
+  position: absolute;
+  right: 16px;
+  bottom: 20px;
+  color: #c6c6c6;
+  font-size: 20px;
+}

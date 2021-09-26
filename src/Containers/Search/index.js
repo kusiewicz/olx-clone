@@ -26,7 +26,7 @@ const Search = () => {
         visibility={warningBanner}
         onClick={() => setWarningBanner((prevValue) => !prevValue)}
       />
-      <Container className={`indent flex cntr ${styles.searchSection}`} id="search">
+      <Container id="search" className={`indent flex cntr ${styles.searchSectionContainer}`}>
         <Container className={`flex cntr ${styles.searchMainContainer}`}>
           <Icon className={`icon-search ${styles.searchIcon1}`} />
           <SearchBox
