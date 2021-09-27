@@ -72,3 +72,7 @@
 .turquoise {
   @include colorway($color: v.$turquoise);
 }
+
+.darkGreen {
+  @include colorway($color: v.$darkGreen);
+}

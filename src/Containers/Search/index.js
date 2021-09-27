@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import classnames from 'classnames';
-import { Container, SearchBox, HoverButton, Icon, Tooltip, WarningBanner } from '../../Components';
+import { Container, SearchBox, Button, Icon, Tooltip, WarningBanner } from '../../Components';
 
 import styles from './styles.module.scss';
 
@@ -51,7 +51,7 @@ const Search = () => {
         </Container>
 
         <Container className={`flex cntr ${styles.searchBtnContainer} `}>
-          <HoverButton className={styles.searchBtn}>Szukaj</HoverButton>
+          <Button className={styles.searchBtn}>Szukaj</Button>
           <Icon className={`icon-search ${styles.searchIcon2}`} />
         </Container>
       </Container>

@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './styles.module.scss';
-import { Container, Logo, Icon, HoverButton, SubLogo } from '../../Components';
+import { Container, Logo, Icon, Button, SubLogo } from '../../Components';
 
 const NavBar = () => (
   <>
@@ -23,7 +23,7 @@ const NavBar = () => (
             <Icon className={`icon-user-o white ${styles.userIcon}`} />
             <span className={`rel ${styles.olxText}`}>Mój OLX</span>
           </Container>
-          <HoverButton className={styles.btn}>Dodaj ogłoszenie</HoverButton>
+          <Button className={styles.btn}>Dodaj ogłoszenie</Button>
         </Container>
       </Container>
     </Container>
