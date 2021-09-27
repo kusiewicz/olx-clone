@@ -15,7 +15,8 @@ const NavBar = () => (
         </a>
         <Container className={`flex cntr ${styles.userPanel}`}>
           <Container className={styles.hover}>
-            <span className={styles.message}>Wiadomości</span>
+            <Icon className={`icon-comment rel ${styles.messageIcon}`} />
+            <span className={`rel ${styles.message}`}>Wiadomości</span>
           </Container>
           <Icon className={`icon-heart-empty white rel ${styles.heartIcon} ${styles.hover}`} />
           <Container className={styles.hover}>

@@ -31,12 +31,15 @@
   color: white;
 }
 
-.message {
-  margin: 0 15px;
+.messageIcon {
+  color: white;
+  font-size: 22px;
+  margin-right: 18px;
+  top: 2px;
 }
 
 .heartIcon {
-  margin-right: 40px;
+  margin: 0 40px;
   font-size: 18px;
   top: 1px;
 }
@@ -44,6 +47,10 @@
 .userIcon {
   margin-right: 10px;
   font-size: 19px;
+}
+
+.message {
+  bottom: 2px;
 }
 
 .olxText {
