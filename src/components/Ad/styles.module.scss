@@ -65,3 +65,45 @@
   color: #c6c6c6;
   font-size: 20px;
 }
+
+.tooltip {
+  height: 18px;
+  width: 60px;
+  padding: 10px 15px;
+  background-color: #3a77ff;
+  font-family: Geomanist-Regular;
+  border-radius: 4px;
+  font-size: 14px;
+  position: absolute;
+  bottom: 53px;
+  right: -39px;
+  z-index: 5;
+  display: none;
+
+  &:before {
+    content: attr(tooltipText);
+    color: white;
+  }
+
+  &:after {
+    content: '';
+    background-color: #3a77ff;
+    width: 11px;
+    height: 11px;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 33px;
+  }
+}
+
+.favouriteWrapper {
+  &:hover {
+    .tooltip {
+      display: block;
+    }
+
+    .icon {
+      color: v.$darkGreen;
+    }
+  }
+}

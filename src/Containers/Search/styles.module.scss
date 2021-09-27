@@ -115,6 +115,9 @@ i {
   font-family: Geomanist-Regular;
   font-weight: 400;
   border-radius: 3px;
+  position: absolute;
+  top: 80px;
+  display: none;
 
   &:before {
     content: attr(data);
@@ -130,8 +133,4 @@ i {
     bottom: 26px;
     left: 13px;
   }
-
-  position: absolute;
-  top: 80px;
-  display: none;
 }
