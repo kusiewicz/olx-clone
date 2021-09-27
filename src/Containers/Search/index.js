@@ -39,7 +39,7 @@ const Search = () => {
         </Container>
 
         <Container className={`flex cntr rel ${styles.locationContainer} `}>
-          <Tooltip className={styles.tooltip} data="Wybierz miasto lub kod pocztowy" />
+          <Tooltip className={styles.tooltip} tooltipText="Wybierz miasto lub kod pocztowy" />
           <Icon className={`icon-location-outline ${styles.locationIcon}`} />
           <SearchBox
             value={locationText}

@@ -22,14 +22,22 @@
   }
 }
 
-.title {
+.titleWrapper {
+  margin-bottom: auto;
   padding: 15px 0;
+}
+
+.title {
   font-size: 16px;
   line-height: 1.25;
   font-family: Geomanist-Regular;
   font-weight: 400;
   color: v.$darkGreen;
-  margin-bottom: auto;
+
+  &:hover {
+    background-color: v.$darkGreen;
+    color: white;
+  }
 }
 
 .location {

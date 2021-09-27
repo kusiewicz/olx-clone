@@ -10,9 +10,11 @@ const Ad = ({ title, image, location, price, onClick }) => {
       <div className={styles.image}>
         <img alt={title} src={image} />
       </div>
-      <span className={styles.title}>{title}</span>
+      <div className={styles.titleWrapper}>
+        <span className={styles.title}>{title}</span>
+      </div>
       <span className={styles.location}>{location}</span>
-      <span className={styles.price}>{price}</span>
+      <span className={styles.price}>{`${price} zł`}</span>
       <i
         role="presentation"
         className={`icon-heart-empty ${styles.icon}`}
