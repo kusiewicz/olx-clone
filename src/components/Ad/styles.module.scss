@@ -8,18 +8,36 @@
   flex-direction: column;
   box-sizing: border-box;
   border-radius: 4px;
+
+  @media (max-width: 1440px) {
+    height: 320px;
+  }
 }
 
-.image {
+.imageWrapper {
   height: 218px;
   width: 100%;
-  line-height: 218px;
 
   img {
     height: 100%;
     width: 100%;
     object-fit: cover;
   }
+
+  @media (max-width: 1440px) {
+    height: 156px;
+  }
+}
+
+.delivery {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: url('../../Assets/Images/truck.svg') no-repeat center;
+  background-size: cover;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
 }
 
 .titleWrapper {

@@ -14,6 +14,9 @@ const NavBar = () => (
           <SubLogo />
         </a>
         <Container className={`flex cntr ${styles.userPanel}`}>
+          <Container className={styles.hover}>
+            <span className={styles.message}>Wiadomości</span>
+          </Container>
           <Icon className={`icon-heart-empty white rel ${styles.heartIcon} ${styles.hover}`} />
           <Container className={styles.hover}>
             <Icon className={`icon-user-o white ${styles.userIcon}`} />

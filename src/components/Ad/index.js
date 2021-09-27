@@ -7,8 +7,9 @@ const Ad = ({ title, image, location, price, onClick }) => {
   console.log('esas');
   return (
     <div className={`rel ${styles.adContainer}`}>
-      <div className={styles.image}>
+      <div className={`rel ${styles.imageWrapper}`}>
         <img alt={title} src={image} />
+        <span className={styles.delivery} />
       </div>
       <div className={styles.titleWrapper}>
         <span className={styles.title}>{title}</span>
