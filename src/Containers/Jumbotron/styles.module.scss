@@ -132,3 +132,43 @@
 .linkedin {
   background: url('../../Assets/Images/linkedin.svg');
 }
+
+.popularWrapper {
+  padding: 62px 0;
+}
+
+.popularLeft,
+.popularRight {
+  width: 47%;
+  display: inline-block;
+}
+
+.popularRight {
+  margin-left: 67px;
+}
+
+.popularCategoryImage {
+  width: 114px;
+  height: 129px;
+  background: url('../../Assets/Images/page.svg') no-repeat 50% 50%;
+  background-size: contain;
+}
+
+.popularPopularImage {
+  width: 150px;
+  height: 119px;
+  background: url('../../Assets/Images/magnifier.svg');
+  background-size: contain;
+}
+
+.popularText {
+  font-size: 14px;
+  line-height: 24px;
+  margin-top: 25px;
+  font-family: Geomanist-Regular;
+}
+
+.bold {
+  font-weight: 600;
+  font-family: Geomanist-Book;
+}
