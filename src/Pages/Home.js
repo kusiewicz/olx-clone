@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { NavBar, Search, Categories, PromotedAds, Jumbotron } from '../Containers';
+import { NavBar, Search, Categories, PromotedAds, Jumbotron, Footer } from '../Containers';
 
 const Home = () => (
   <>
@@ -9,6 +9,7 @@ const Home = () => (
     <Categories />
     <PromotedAds />
     <Jumbotron />
+    <Footer />
   </>
 );
 
