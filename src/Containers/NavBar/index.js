@@ -10,7 +10,7 @@ const NavBar = () => (
     <Container id="header" className={styles.nav}>
       <Container className={`flex ${styles.wrapper}`}>
         <a href="http://www.olx.pl" className="rel">
-          <Logo color="turquoise" />
+          <Logo color="turquoise" size="small" />
           <SubLogo />
         </a>
         <Container className={`flex cntr ${styles.userPanel}`}>
