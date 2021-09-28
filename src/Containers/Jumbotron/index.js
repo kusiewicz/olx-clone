@@ -17,9 +17,11 @@ const Jumbotron = () => (
         </a>
       </Container>
     </Container>
-    <Container className={styles.infoWrapper}>
-      <Container className="indent flex cntr">
-        <Logo color="darkGreen" className={styles.logo} />
+    <Container className={styles.infoContainer}>
+      <Container className={styles.infoWrapper}>
+        <Container className={styles.logoWrapper}>
+          <Logo color="darkGreen" className={styles.logo} />
+        </Container>
         <span className={styles.infoText}>
           OLX.pl to darmowe ogłoszenia lokalne w kategoriach: Moda, Zwierzęta, Dla Dzieci, Sport i
           Hobby, Muzyka i Edukacja. Szybko znajdziesz tu ciekawe ogłoszenia i łatwo skontaktujesz
