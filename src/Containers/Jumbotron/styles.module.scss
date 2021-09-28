@@ -2,6 +2,7 @@
 
 .jumbotronContainer {
   min-width: 1080px;
+  border-bottom: 1px solid v.$darkGreen;
 }
 
 .businessContainer {
@@ -133,18 +134,18 @@
   background: url('../../Assets/Images/linkedin.svg');
 }
 
-.popularWrapper {
+.popularContainer {
   padding: 62px 0;
 }
 
 .popularLeft,
 .popularRight {
-  width: 47%;
+  width: 46%;
   display: inline-block;
 }
 
 .popularRight {
-  margin-left: 67px;
+  margin-left: 80px;
 }
 
 .popularCategoryImage {

@@ -49,26 +49,24 @@ const Jumbotron = () => (
         </Container>
       </Container>
     </Container>
-    <Container className={styles.popularWrapper}>
-      <Container className="indent">
-        <Container className={styles.popularLeft}>
-          <Container className={styles.popularCategoryImage} />
-          <p className={styles.popularText}>
-            <strong className={`${styles.bold}`}>Kategorie główne: </strong>
-            Motoryzacja, Nieruchomości, Praca, Dom i Ogród, Elektronika, Moda, Rolnictwo, Zwierzęta,
-            Dla Dzieci, Sport i Hobby, Muzyka i Edukacja, Usługi i Firmy, Noclegi, Oddam za darmo,
-            Zamienię
-          </p>
-        </Container>
-        <Container className={styles.popularRight}>
-          <Container className={styles.popularPopularImage} />
-          <p className={styles.popularText}>
-            <strong className={`${styles.bold}`}>Popularne wyszukiwania: </strong>
-            Praca, Mercedes, Zetor, Kamper, Ursus, Mieszkanie, 4x4, Monstera, Rower, Kawalerka,
-            Neocate junior, Komoda, Mtz, Meble kuchenne, Wywrotka, Koparko ładowarka, Dom, Szafa,
-            Kierowca, Uszkodzony
-          </p>
-        </Container>
+    <Container className={`indent ${styles.popularContainer}`}>
+      <Container className={styles.popularLeft}>
+        <Container className={styles.popularCategoryImage} />
+        <p className={styles.popularText}>
+          <strong className={`${styles.bold}`}>Kategorie główne: </strong>
+          Motoryzacja, Nieruchomości, Praca, Dom i Ogród, Elektronika, Moda, Rolnictwo, Zwierzęta,
+          Dla Dzieci, Sport i Hobby, Muzyka i Edukacja, Usługi i Firmy, Noclegi, Oddam za darmo,
+          Zamienię
+        </p>
+      </Container>
+      <Container className={styles.popularRight}>
+        <Container className={styles.popularPopularImage} />
+        <p className={styles.popularText}>
+          <strong className={`${styles.bold}`}>Popularne wyszukiwania: </strong>
+          Praca, Mercedes, Zetor, Kamper, Ursus, Mieszkanie, 4x4, Monstera, Rower, Kawalerka,
+          Neocate junior, Komoda, Mtz, Meble kuchenne, Wywrotka, Koparko ładowarka, Dom, Szafa,
+          Kierowca, Uszkodzony
+        </p>
       </Container>
     </Container>
   </Container>
