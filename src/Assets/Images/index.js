@@ -16,3 +16,4 @@ export { default as sport } from './sport.png';
 export { default as usługi } from './usługi.png';
 export { default as zamienie } from './zamienie.png';
 export { default as zwierzeta } from './zwierzeta.png';
+export { default as github } from './github.png';

@@ -8,7 +8,7 @@
 }
 
 .footerContainer {
-  padding-top: 55px;
+  padding-top: 62px;
   min-height: 385px;
   position: relative;
 }
@@ -35,6 +35,7 @@
 
 .mobileDownload {
   text-align: center;
+  vertical-align: top;
 }
 
 .mobileText {
@@ -94,4 +95,16 @@
   .hoverText {
     right: 10%;
   }
+}
+
+.githubWrapper {
+  position: relative;
+  bottom: -25px;
+  width: 32px;
+}
+
+.github {
+  background: url('../../Assets/Images/github.png');
+  width: 32px;
+  height: 32px;
 }

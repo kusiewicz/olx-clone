@@ -3,6 +3,8 @@ import styles from './styles.module.scss';
 
 import { Container } from '../../Components';
 
+// import { github } from '../../Assets/Images';
+
 const Footer = () => (
   <Container id="footer" className={`indent ${styles.footerContainer}`}>
     <Container className={styles.pointsLeft}>
@@ -85,6 +87,11 @@ const Footer = () => (
         </Container>
       </a>
       <h4 className={styles.mobileText}>Darmowa aplikacja na Twój telefon</h4>
+    </Container>
+    <Container className={styles.githubWrapper}>
+      <a href="https://github.com/kusiewicz/olx-clone">
+        <Container className={styles.github} />
+      </a>
     </Container>
   </Container>
 );
