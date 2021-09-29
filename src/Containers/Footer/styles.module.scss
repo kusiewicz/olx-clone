@@ -1,6 +1,16 @@
+@use '../../Assets/Styles/variables' as v;
+
+%downloadText {
+  font-size: 12px;
+  color: #8e8e8e;
+  line-height: 16px;
+  font-family: Geomanist-Regular;
+}
+
 .footerContainer {
   padding-top: 55px;
   min-height: 385px;
+  position: relative;
 }
 
 .footerList {
@@ -21,4 +31,67 @@
 .pointsLeft,
 .pointsRight {
   display: inline-block;
+}
+
+.mobileDownload {
+  text-align: center;
+}
+
+.mobileText {
+  @extend %downloadText;
+  position: relative;
+  background-color: v.$backgroundGrey;
+  height: 40px;
+  margin-top: 3px;
+}
+
+.grey,
+.color {
+  @extend %downloadText;
+}
+
+.color {
+  color: #002f34;
+  font-weight: 600;
+}
+
+.googlePlay,
+.appStore {
+  width: 140px;
+  height: 48px;
+  display: inline-block;
+  position: relative;
+  margin: 0 3px;
+
+  .hoverText {
+    position: absolute;
+    width: 180%;
+    color: white;
+    text-align: center;
+    height: 40px;
+    bottom: -45px;
+    background-color: v.$backgroundGrey;
+  }
+
+  &:hover {
+    .hoverText {
+      z-index: 3;
+    }
+  }
+}
+
+.googlePlay {
+  background: url('../../Assets/Images/googleplay.svg');
+
+  .hoverText {
+    left: 10%;
+  }
+}
+
+.appStore {
+  background: url('../../Assets/Images/applestore.svg');
+
+  .hoverText {
+    right: 10%;
+  }
 }

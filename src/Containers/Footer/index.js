@@ -68,8 +68,22 @@ const Footer = () => (
       </ul>
     </Container>
     <Container className={styles.mobileDownload}>
-      <Container className={styles.googlePlay} />
-      <Container className={styles.appStore} />
+      <a href="https://play.google.com/store/apps/details?id=pl.tablica&referrer=utm_source%3Dolx.pl%26utm_medium%3Dcpc%26utm_campaign%3Dandroid-app-footer">
+        <Container className={styles.googlePlay}>
+          <Container className={styles.hoverText}>
+            <h5 className={styles.grey}>Do pobrania w</h5>
+            <h5 className={styles.color}>Google Play</h5>
+          </Container>
+        </Container>
+      </a>
+      <a href="https://apps.apple.com/pl/app/olx-pl-darmowe-og-oszenia/id531717763?l=pl&ls=1">
+        <Container className={styles.appStore}>
+          <Container className={styles.hoverText}>
+            <h5 className={styles.grey}>Pobierz w</h5>
+            <h5 className={styles.color}>AppStore</h5>
+          </Container>
+        </Container>
+      </a>
       <h4 className={styles.mobileText}>Darmowa aplikacja na Twój telefon</h4>
     </Container>
   </Container>
