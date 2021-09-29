@@ -27,13 +27,14 @@ i {
 }
 
 .searchBtnContainer {
+  @extend %inputFields;
   width: 13%;
 
   &:hover {
     background-color: v.$darkGreen;
     color: white;
 
-    span {
+    h3 {
       color: white;
     }
 
@@ -53,9 +54,6 @@ i {
   border-right: 1px solid v.$backgroundGrey;
 }
 
-.searchBtnContainer {
-  @extend %inputFields;
-}
 
 .searchMainField {
   @extend %inputFields;

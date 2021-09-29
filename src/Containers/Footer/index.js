@@ -3,8 +3,6 @@ import styles from './styles.module.scss';
 
 import { Container } from '../../Components';
 
-// import { github } from '../../Assets/Images';
-
 const Footer = () => (
   <Container id="footer" className={`indent ${styles.footerContainer}`}>
     <Container className={styles.pointsLeft}>
