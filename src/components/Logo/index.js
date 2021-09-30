@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 import styles from './styles.module.scss';
 
-const Logo = ({ className, size }) => (
-  <div className={{ className }}>
+const Logo = ({ size }) => (
+  <div className={styles.logoContainer}>
     <span className={size === 'small' ? `${styles.oSmall}` : `${styles.oBig}`} />
     <span className={size === 'small' ? `${styles.lSmall}` : `${styles.lBig}`} />
     <span className={size === 'small' ? `${styles.xSmall}` : `${styles.xBig}`} />
@@ -12,7 +12,6 @@ const Logo = ({ className, size }) => (
 );
 
 Logo.propTypes = {
-  className: PropTypes.string,
   size: PropTypes.string,
 };
 

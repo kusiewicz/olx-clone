@@ -19,6 +19,7 @@
   justify-content: center;
   top: 5px;
   transform: translate(4px);
+  animation: logoAnimation 0.3s ease 0.8s both;
 }
 
 .c {
@@ -91,5 +92,15 @@
     top: 49%;
     right: 42%;
     transform: translate(50%, -50%);
+  }
+}
+
+@keyframes logoAnimation {
+  0% {
+    transform: translateX(-50px) scale(0);
+  }
+
+  100% {
+    transform: translateX(4px) scale(1);
   }
 }

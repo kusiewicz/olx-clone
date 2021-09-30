@@ -43,12 +43,18 @@
 
 /* ----------- */
 
+.logoContainer {
+  height: 100%;
+  width: 100%;
+}
+
 .oSmall {
   @extend %o;
   height: 10px;
   width: 10px;
   transform: translate(12px, 15px);
   box-shadow: 0px 0px 0px 12px v.$turquoise;
+  animation: oAnimation 0.4s ease 0.2s both;
 }
 
 .oBig {
@@ -63,6 +69,7 @@
   @extend %l;
   width: 10px;
   background-color: v.$turquoise;
+  animation: lAnimation 0.4s ease 0.3s both;
 }
 
 .lBig {
@@ -75,6 +82,7 @@
   @extend %x;
   width: 20px;
   height: 20px;
+  animation: xAnimation 0.4s ease 0.2s both;
 
   &:before,
   &:after {
@@ -92,5 +100,33 @@
   &:before,
   &:after {
     background-color: v.$darkGreen;
+  }
+}
+
+@keyframes oAnimation {
+  0% {
+    transform: translate(37px, 15px) scale(0.3);
+  }
+  100% {
+    transform: translate(12px, 15px) scale(1);
+  }
+}
+
+@keyframes lAnimation {
+  0% {
+    transform: scaleY(50%);
+  }
+  100% {
+    transform: scaleY(100%);
+  }
+}
+
+@keyframes xAnimation {
+  0% {
+    transform: translate(34px, 11px) scale(0.3);
+  }
+
+  100% {
+    transform: translate(51px, 11px) scale(1);
   }
 }
