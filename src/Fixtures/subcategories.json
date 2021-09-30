@@ -1,0 +1,239 @@
+[
+  {
+    "name": "Motoryzacja",
+    "subCategories": [
+      "Samochody osobowe",
+      "Motocykle i Skutery",
+      "Dostawcze i Ciężarowe",
+      "Przyczepy i Pojazdy użytkowe",
+      "Części samochodowe",
+      "Części motocyklowe",
+      "Opony i Felgi",
+      "Sprzęt car audio",
+      "Pozostała motoryzacja",
+      "Samochody i pojazdy",
+      "Ubezpieczenia OC/AC"
+    ]
+  },
+  {
+    "name": "Nieruchomości",
+    "subCategories": [
+      "Mieszkania",
+      "Domy",
+      "Działki",
+      "Biura i Lokale",
+      "Garaże i Parkingi",
+      "Kwatery pracownicze",
+      "Stancje i Pokoje",
+      "Hale i Magazyny",
+      "Pozostałe nieruchomości",
+      "Ogród"
+    ]
+  },
+  {
+    "name": "Praca",
+    "subCategories": [
+      "Administracja Biurowa",
+      "Budowa / remonty",
+      "Call center, konsultant telefoniczny",
+      "E-commerce (handel internetowy)",
+      "Edukacja",
+      "Finanse / księgowośc",
+      "Franczyzna / Własna firma",
+      "Fryzjerstwo, kosmetyka",
+      "Gastronomia",
+      "HR",
+      "Hostessa",
+      "Hotelarstwo",
+      "IT / telekomunikacja",
+      "Kasjer, pracownik sklepu",
+      "Logistyka i zakupy",
+      "Marketing / PR / media",
+      "Mechanik / blacharz lakiernik",
+      "Ochrona",
+      "Opieka",
+      "Praca za granicą",
+      "Prace magazynowe",
+      "Produkcja",
+      "Rolnictwo i ogrodnictwo",
+      "Roznoszenie ulotek",
+      "Sprzątanie",
+      "Sprzedaż i obsługa klienta",
+      "Transport, spedycja",
+      "Zdrowie",
+      "Pozostałe oferty pracy",
+      "Praca dodatkowa / sezonowa",
+      "Praktyki / staże",
+      "Kadra kierownicza"
+    ]
+  },
+  {
+    "name": "Dom i Ogród",
+    "subCategories": [
+      "Meble",
+      "Zdrowie",
+      "Ogród",
+      "Narzędzia",
+      "Materiały budowlane",
+      "Ogrzewanie",
+      "Wyposażenie wnętrz",
+      "Sprzęt AGD",
+      "Pozostałe dom i ogród"
+    ]
+  },
+  {
+    "name": "Elektronika",
+    "subCategories": [
+      "Akcesoria telefoniczne",
+      "Fotografia",
+      "Gry i Konsole",
+      "Komputery",
+      "Smartwatche i opaski",
+      "Sprzęt AGD",
+      "Sprzęt audio",
+      "Sprzęt video",
+      "Telefony",
+      "TV",
+      "Pozostała elektronika",
+      "Sprzęt car audio"
+    ]
+  },
+  {
+    "name": "Moda",
+    "subCategories": [
+      "Ubrania",
+      "Buty",
+      "Bielizna",
+      "Odzież ciążowa",
+      "Dodatki",
+      "Biżuteria",
+      "Torebki",
+      "Zegarki",
+      "Kosmetyki i perfumy",
+      "Pozostała moda",
+      "Moda ślubna",
+      "Akcesoria ślubne",
+      "Ubranka dla dzieci",
+      "Odzież sportowa",
+      "Obuwie sportowe",
+      "Odzież ciążowa",
+      "Zegarki",
+      "Akcesoria ślubne"
+    ]
+  },
+  {
+    "name": "Rolnictwo",
+    "subCategories": [
+      "Ciągniki",
+      "Maszyny rolnicze",
+      "Przyczepy",
+      "Częsci do maszyn rolniczych",
+      "Opony rolnicze",
+      "Produkty rolne",
+      "Giełda zwierząt",
+      "Ryneczek",
+      "Pozostałe rolnicze",
+      "Pozostałe zwierzęta",
+      "Dostawcze i ciężarowe",
+      "Częsci do maszyn rolniczych",
+      "Ryneczek"
+    ]
+  },
+  {
+    "name": "Zwierzęta",
+    "subCategories": [
+      "Psy",
+      "Koty",
+      "Ptaki",
+      "Gryzonie i Króliki",
+      "Konie",
+      "Akwarystyka",
+      "Pozostałe zwierzęta",
+      "Akcesoria dla zwierząt",
+      "Zaginione i znalezione",
+      "Giełda zwierząt",
+      "Usługi dla zwierząt"
+    ]
+  },
+  {
+    "name": "Dla Dzieci",
+    "subCategories": [
+      "Zabawki",
+      "Wózki dziecięce",
+      "Akcesoria dla niemowląt",
+      "Foteliki - Nosidełka",
+      "Ubranka dla dzieci",
+      "Buciki",
+      "Meble dla dzieci",
+      "Pozostałe dla dzieci",
+      "Rowery",
+      "Odzież ciążowa"
+    ]
+  },
+  {
+    "name": "Sport i Hobby",
+    "subCategories": [
+      "Akcesoria jeździeckie",
+      "Bilety",
+      "FItness",
+      "Gry planszowe",
+      "Kolekcje",
+      "Militaria",
+      "Obuwie sportowe",
+      "Odzież sportowa",
+      "Rowery",
+      "Skating",
+      "Społeczność",
+      "Sporty wodne",
+      "Sporty zimowe",
+      "Turystyka",
+      "Wędkarstwo",
+      "Pozostały sport i hobby",
+      "Instrumenty"
+    ]
+  },
+  {
+    "name": "Muzyka i Edukacja",
+    "subCategories": [
+      "Książki",
+      "Muzyka",
+      "Filmy",
+      "Intrumenty",
+      "Pozostała muzyka i edukacja",
+      "Materiały językowe",
+      "Sprzęt audio",
+      "Gry i Konsole",
+      "Korepetycje",
+      "Kursy i warsztaty"
+    ]
+  },
+  {
+    "name": "Usługi i firmy",
+    "subCategories": [
+      "Usługi",
+      "Wyposażenie firm",
+      "Wypożyczalnia",
+      "Usługi ślubne",
+      "Budowa i Remont",
+      "Korepetycje",
+      "Kursy i Warsztaty",
+      "Meble na wymiar",
+      "Muzycy",
+      "Obsługa imprez",
+      "Serwis RTV i AGD",
+      "Sprzątanie",
+      "Tłumaczenia",
+      "Usługi dla zwierząt",
+      "Usługi finansowe",
+      "Usługi informatyczne",
+      "Usługi kosmetyczne",
+      "Usługi motoryzacyjne",
+      "Usługi ogrodnicze",
+      "Usługi reklamowe",
+      "Usługi transportowe",
+      "Usługi zdrowotne",
+      "Pozostałe usługi",
+      "Usługi remontowe - Fixly"
+    ]
+  }
+]

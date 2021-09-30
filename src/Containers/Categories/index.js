@@ -31,7 +31,12 @@ const Categories = () => {
     <Container id="mainCategories" className={`${styles.categoriesContainer}`}>
       <h1 className={styles.title}>Kategorie główne</h1>
       <Container className={`${styles.categoryWrapper} flex indent`}>
-        <Category category="Motoryzacja" className={styles.motoryzacja} src={motoryzacja} />
+        <Category
+          category="Motoryzacja"
+          className={styles.motoryzacja}
+          src={motoryzacja}
+          subcategories
+        />
         <Category category="Nieruchomości" className={styles.nieruchomosci} src={nieruchomosci} />
         <Category category="Praca" className={styles.praca} src={praca} />
         <Category category="Dom i Ogród" className={styles.dom} src={dom} />
