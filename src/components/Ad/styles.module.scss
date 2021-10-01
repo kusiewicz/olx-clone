@@ -99,7 +99,7 @@
   display: none;
 
   &:before {
-    content: attr(tooltipText);
+    content: attr(tooltiptext);
     color: white;
   }
 
