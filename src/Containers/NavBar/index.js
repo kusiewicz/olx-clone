@@ -1,18 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import styles from './styles.module.scss';
 import { Container, Logo, Icon, Button, SubLogo } from '../../Components';
 
 const NavBar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const prevScroll = useRef(0);
 
   /* Disappearing NavBar */
   const navBarVisibilityHandler = () => {
     const scrollVertical = window.scrollY;
-    if (scrollVertical > 0) {
+    if (scrollVertical >= prevScroll.current) {
       setScrolled(true);
     } else {
       setScrolled(false);
     }
+    prevScroll.current = scrollVertical;
   };
 
   useEffect(() => {
