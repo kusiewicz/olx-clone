@@ -16,11 +16,7 @@ const Ad = ({ title, image, location, price, onClick }) => (
     <span className={styles.price}>{`${price} zł`}</span>
     <div className={styles.favouriteWrapper}>
       <span className={styles.tooltip} tooltipText="Obserwuj" />
-      <i
-        role="presentation"
-        className={`icon-heart-empty ${styles.icon}`}
-        onClick={() => onClick()}
-      />
+      <i className={`icon-heart-empty ${styles.icon}`} onClick={() => onClick()} />
     </div>
   </div>
 );

@@ -5,7 +5,7 @@ import { Container } from '../../Components';
 
 const Footer = () => (
   <Container id="footer" className={`indent ${styles.footerContainer}`}>
-    <Container className={styles.pointsLeft}>
+    <Container className={`inblock ${styles.pointsLeft}`}>
       <ul className={styles.footerList}>
         <li className={styles.footerPoint}>
           <a href="https://www.olx.pl/lp/mobilne/">Aplikacje mobilne OLX.pl </a>
@@ -36,7 +36,7 @@ const Footer = () => (
         </li>
       </ul>
     </Container>
-    <Container className={styles.pointsRight}>
+    <Container className={`inblock ${styles.pointsRight}`}>
       <ul className={styles.footerList}>
         <li className={styles.footerPoint}>
           <a href="https://www.olx.pl/jak-dziala-olx/">Jak działa OLX.pl </a>
@@ -67,9 +67,9 @@ const Footer = () => (
         </li>
       </ul>
     </Container>
-    <Container className={styles.mobileDownload}>
+    <Container className={`inblock ${styles.mobileDownload}`}>
       <a href="https://play.google.com/store/apps/details?id=pl.tablica&referrer=utm_source%3Dolx.pl%26utm_medium%3Dcpc%26utm_campaign%3Dandroid-app-footer">
-        <Container className={styles.googlePlay}>
+        <Container className={`inblock ${styles.googlePlay}`}>
           <Container className={styles.hoverText}>
             <h5 className={styles.grey}>Do pobrania w</h5>
             <h5 className={styles.color}>Google Play</h5>
@@ -77,7 +77,7 @@ const Footer = () => (
         </Container>
       </a>
       <a href="https://apps.apple.com/pl/app/olx-pl-darmowe-og-oszenia/id531717763?l=pl&ls=1">
-        <Container className={styles.appStore}>
+        <Container className={`inblock ${styles.appStore}`}>
           <Container className={styles.hoverText}>
             <h5 className={styles.grey}>Pobierz w</h5>
             <h5 className={styles.color}>AppStore</h5>

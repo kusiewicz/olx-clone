@@ -34,23 +34,23 @@ const Jumbotron = () => (
           <h4 className={styles.infoSubText}>Dołącz do nas:</h4>
           <Container className={styles.socialImages}>
             <a href="https://www.facebook.com/olx.polska">
-              <Container className={styles.facebook} />
+              <Container className={`inblock ${styles.facebook}`} />
             </a>
             <a href="https://www.instagram.com/olxpolska/">
-              <Container className={styles.instagram} />
+              <Container className={`inblock ${styles.instagram}`} />
             </a>
             <a href="https://www.youtube.com/channel/UCGr18y85p6zXQwBev6CGwow">
-              <Container className={styles.youtube} />
+              <Container className={`inblock ${styles.youtube}`} />
             </a>
             <a href="https://pl.linkedin.com/company/olxpraca">
-              <Container className={styles.linkedin} />
+              <Container className={`inblock ${styles.linkedin}`} />
             </a>
           </Container>
         </Container>
       </Container>
     </Container>
     <Container className={`indent ${styles.popularContainer}`}>
-      <Container className={styles.popularLeft}>
+      <Container className={`inblock ${styles.popularLeft}`}>
         <Container className={styles.popularCategoryImage} />
         <p className={styles.popularText}>
           <strong className={`${styles.bold}`}>Kategorie główne: </strong>
@@ -59,7 +59,7 @@ const Jumbotron = () => (
           Zamienię
         </p>
       </Container>
-      <Container className={styles.popularRight}>
+      <Container className={`inblock ${styles.popularRight}`}>
         <Container className={styles.popularPopularImage} />
         <p className={styles.popularText}>
           <strong className={`${styles.bold}`}>Popularne wyszukiwania: </strong>

@@ -1,9 +1,12 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable arrow-body-style */
-import React from 'react';
+import React, { useState } from 'react';
 
 import styles from './styles.module.scss';
 
-import { Container, Category } from '../../Components';
+import { Container, Category, SubCategories } from '../../Components';
+
+import categoriesData from '../../Fixtures/categories.json';
 
 import {
   dom,
@@ -27,16 +30,47 @@ import {
 } from '../../Assets/Images';
 
 const Categories = () => {
+  const [hidden, setHidden] = useState(true);
+
+  const images = {
+    dom,
+    dzieci,
+    elektronika,
+    fixly,
+    moda,
+    motoryzacja,
+    muzyka,
+    nieruchomosci,
+    noclegi,
+    oddam,
+    pracaDodatkowa,
+    praca,
+    przesylka1zl,
+    rolnictwo,
+    sport,
+    usługi,
+    zamienie,
+    zwierzeta,
+  };
+
   return (
     <Container id="mainCategories" className={`${styles.categoriesContainer}`}>
       <h1 className={styles.title}>Kategorie główne</h1>
       <Container className={`${styles.categoryWrapper} flex indent`}>
-        <Category
-          category="Motoryzacja"
-          className={styles.motoryzacja}
-          src={motoryzacja}
-          subcategories
-        />
+        {categoriesData.map((category) => (
+          <>
+            <Category
+              category={category.name}
+              className={styles[category.className]}
+              src={images[category.img]}
+            />
+            {category.name === 'Dla Dzieci' && (
+              <SubCategories category={category.name} subCategory={category.subCategories} />
+            )}
+          </>
+        ))}
+
+        {/* <Category category="Motoryzacja" className={styles.motoryzacja} src={motoryzacja} />
         <Category category="Nieruchomości" className={styles.nieruchomosci} src={nieruchomosci} />
         <Category category="Praca" className={styles.praca} src={praca} />
         <Category category="Dom i Ogród" className={styles.dom} src={dom} />
@@ -62,7 +96,7 @@ const Categories = () => {
           image="przesylka1zl"
           src={przesylka1zl}
           className={styles.przesylka1zl}
-        />
+        /> */}
       </Container>
     </Container>
   );

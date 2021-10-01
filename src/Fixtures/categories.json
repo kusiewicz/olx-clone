@@ -1,6 +1,8 @@
 [
   {
     "name": "Motoryzacja",
+    "className": "motoryzacja",
+    "img": "motoryzacja",
     "subCategories": [
       "Samochody osobowe",
       "Motocykle i Skutery",
@@ -17,6 +19,8 @@
   },
   {
     "name": "Nieruchomości",
+    "className": "nieruchomosci",
+    "img": "nieruchomosci",
     "subCategories": [
       "Mieszkania",
       "Domy",
@@ -32,6 +36,8 @@
   },
   {
     "name": "Praca",
+    "className": "praca",
+    "img": "praca",
     "subCategories": [
       "Administracja Biurowa",
       "Budowa / remonty",
@@ -69,6 +75,8 @@
   },
   {
     "name": "Dom i Ogród",
+    "className": "dom",
+    "img": "dom",
     "subCategories": [
       "Meble",
       "Zdrowie",
@@ -83,6 +91,8 @@
   },
   {
     "name": "Elektronika",
+    "className": "elektronika",
+    "img": "elektronika",
     "subCategories": [
       "Akcesoria telefoniczne",
       "Fotografia",
@@ -100,6 +110,8 @@
   },
   {
     "name": "Moda",
+    "className": "moda",
+    "img": "moda",
     "subCategories": [
       "Ubrania",
       "Buty",
@@ -123,6 +135,8 @@
   },
   {
     "name": "Rolnictwo",
+    "className": "rolnictwo",
+    "img": "rolnictwo",
     "subCategories": [
       "Ciągniki",
       "Maszyny rolnicze",
@@ -141,6 +155,8 @@
   },
   {
     "name": "Zwierzęta",
+    "className": "zwierzeta",
+    "img": "zwierzeta",
     "subCategories": [
       "Psy",
       "Koty",
@@ -157,6 +173,8 @@
   },
   {
     "name": "Dla Dzieci",
+    "className": "dzieci",
+    "img": "dzieci",
     "subCategories": [
       "Zabawki",
       "Wózki dziecięce",
@@ -172,6 +190,8 @@
   },
   {
     "name": "Sport i Hobby",
+    "className": "sport",
+    "img": "sport",
     "subCategories": [
       "Akcesoria jeździeckie",
       "Bilety",
@@ -194,6 +214,8 @@
   },
   {
     "name": "Muzyka i Edukacja",
+    "className": "muzyka",
+    "img": "muzyka",
     "subCategories": [
       "Książki",
       "Muzyka",
@@ -209,6 +231,8 @@
   },
   {
     "name": "Usługi i firmy",
+    "className": "uslugi",
+    "img": "usługi",
     "subCategories": [
       "Usługi",
       "Wyposażenie firm",
@@ -235,5 +259,35 @@
       "Pozostałe usługi",
       "Usługi remontowe - Fixly"
     ]
+  },
+  {
+    "name": "Noclegi",
+    "className": "noclegi",
+    "img": "noclegi"
+  },
+  {
+    "name": "Oddam za darmo",
+    "className": "oddam",
+    "img": "oddam"
+  },
+  {
+    "name": "Zamienię",
+    "className": "zamienie",
+    "img": "zamienie"
+  },
+  {
+    "name": "Praca dodatkowa",
+    "className": "pracaDodatkowa",
+    "img": "pracaDodatkowa"
+  },
+  {
+    "name": "Fixly - znajdź fachowca!",
+    "className": "fixly",
+    "img": "fixly"
+  },
+  {
+    "name": "Przesyłka za 1zł w AGD drobne",
+    "className": "przesylka1zl",
+    "img": "przesylka1zl"
   }
 ]

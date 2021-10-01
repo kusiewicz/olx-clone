@@ -1,0 +1,59 @@
+@use '../../Assets/Styles/variables' as v;
+
+.subCategoriesContainer {
+  background-color: white;
+  padding: 23px 26px;
+  border: 1px solid #efefef;
+  margin-top: 30px;
+}
+
+.subCategoriesHeader {
+  border-bottom: 1px solid #efefef;
+  padding-bottom: 18px;
+  font-size: 15px;
+  line-height: 20px;
+  color: #ababab;
+  margin-top: -3px;
+
+  a {
+    &:hover {
+      background: v.$darkGreen;
+      color: white;
+    }
+  }
+}
+
+.subCategoriesList {
+  font-size: 15px;
+  line-height: 19px;
+  display: inline-block;
+}
+
+.subCategoriesPoint {
+  width: 278px;
+  margin-top: 20px;
+  margin-right: 24px;
+  font-family: Geomanist-Regular;
+  font-weight: 400;
+
+  a {
+    h3 {
+      &:hover {
+        background: v.$darkGreen;
+        color: white;
+      }
+    }
+  }
+}
+
+.icon {
+  font-size: 16px;
+  padding-right: 4px;
+}
+
+.category {
+  color: #ababab;
+  font-size: 15px;
+  font-family: Geomanist-Regular;
+  font-weight: 300;
+}
