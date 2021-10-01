@@ -54,7 +54,6 @@ i {
   border-right: 1px solid v.$backgroundGrey;
 }
 
-
 .searchMainField {
   @extend %inputFields;
   width: 80%;
@@ -72,7 +71,6 @@ i {
 
 .searchIcon2 {
   font-size: 26px;
-  margin-left: 8px;
 }
 
 .locationIcon {
@@ -130,5 +128,11 @@ i {
     transform: rotate(45deg);
     bottom: 26px;
     left: 13px;
+  }
+}
+
+.searchBtn {
+  h3 {
+    margin-left: 12px;
   }
 }
