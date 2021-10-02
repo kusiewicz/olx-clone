@@ -68,8 +68,11 @@
 
   &:hover {
     background: none;
-    color: white;
     box-shadow: inset 0 0 0 5px white;
+
+    h3 {
+      color: white;
+    }
   }
 }
 
