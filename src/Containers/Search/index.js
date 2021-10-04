@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import classnames from 'classnames';
-import { Container, SearchBox, Button, Icon, Tooltip, WarningBanner } from '../../Components';
+import { Container, SearchBox, Button, Icon, WarningBanner } from '../../Components';
 
 import styles from './styles.module.scss';
 
@@ -9,18 +8,11 @@ const Search = () => {
   const [locationText, setLocationText] = useState('');
   const [warningBanner, setWarningBanner] = useState(true);
 
-  const cancelIcon = classnames(`${styles.searchCancelIcon}`, searchText ? 'visible' : 'invisible');
-  const cancelIcon2 = classnames(
-    `${styles.locationCancelIcon}`,
-    locationText ? 'visible' : 'invisible'
-  );
-
   return (
     <>
-      <WarningBanner
-        visibility={warningBanner}
-        onClick={() => setWarningBanner((prevValue) => !prevValue)}
-      />
+      {warningBanner && (
+        <WarningBanner onClick={() => setWarningBanner((prevValue) => !prevValue)} />
+      )}
       <Container id="search" className={`indent flex cntr ${styles.searchSectionContainer}`}>
         <Container className={`flex cntr ${styles.searchMainContainer}`}>
           <Icon className={`icon-search ${styles.searchIcon1}`} />
@@ -30,16 +22,17 @@ const Search = () => {
             placeholder="19 630 571 ogłoszeń blisko Ciebie"
             onChange={({ target }) => setSearchText(target.value)}
           />
-          {/* popraw */}
-          <Icon
-            datatestid="search-clear"
-            className={cancelIcon}
-            onClick={() => setSearchText('')}
-          />
+          {searchText && (
+            <Icon
+              datatestid="search-clear"
+              className={`${styles.searchCancelIcon}`}
+              onClick={() => setSearchText('')}
+            />
+          )}
         </Container>
 
         <Container className={`flex cntr rel ${styles.locationContainer} `}>
-          <Tooltip className={styles.tooltip} tooltipText="Wybierz miasto lub kod pocztowy" />
+          <span className={styles.tooltip} tooltipText="Wybierz miasto lub kod pocztowy" />
           <Icon className={`icon-location-outline ${styles.locationIcon}`} />
           <SearchBox
             value={locationText}
@@ -47,11 +40,13 @@ const Search = () => {
             placeholder="Cała Polska"
             onChange={({ target }) => setLocationText(target.value)}
           />
-          <Icon
-            datatestid="location-clear"
-            className={cancelIcon2}
-            onClick={() => setLocationText('')}
-          />
+          {locationText && (
+            <Icon
+              datatestid="location-clear"
+              className={`${styles.locationCancelIcon}`}
+              onClick={() => setLocationText('')}
+            />
+          )}
         </Container>
 
         <Container className={`flex cntr ${styles.searchBtnContainer} `}>
