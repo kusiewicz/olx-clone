@@ -15,7 +15,7 @@ const Search = () => {
       )}
       <Container id="search" className={`indent flex cntr ${styles.searchSectionContainer}`}>
         <Container className={`flex cntr ${styles.searchMainContainer}`}>
-          <Icon className={`icon-search ${styles.searchIcon1}`} />
+          <Icon className={`icon-search ${styles.searchIcon1}`} role="presentation" />
           <SearchBox
             value={searchText}
             className={`${styles.searchMainField}`}
@@ -24,15 +24,17 @@ const Search = () => {
           />
           {searchText && (
             <Icon
-              datatestid="search-clear"
               className={`${styles.searchCancelIcon}`}
+              role="button"
+              tabIndex={0}
+              ariaLabel="wyczyść pole wyszukiwania"
               onClick={() => setSearchText('')}
             />
           )}
         </Container>
 
         <Container className={`flex cntr rel ${styles.locationContainer} `}>
-          <span className={styles.tooltip} tooltipText="Wybierz miasto lub kod pocztowy" />
+          <span className={styles.tooltip} tooltiptext="Wybierz miasto lub kod pocztowy" />
           <Icon className={`icon-location-outline ${styles.locationIcon}`} />
           <SearchBox
             value={locationText}
@@ -42,16 +44,20 @@ const Search = () => {
           />
           {locationText && (
             <Icon
-              datatestid="location-clear"
               className={`${styles.locationCancelIcon}`}
+              role="button"
+              tabIndex={0}
+              ariaLabel="wyczyść pole lokalizacji"
               onClick={() => setLocationText('')}
             />
           )}
         </Container>
 
         <Container className={`flex cntr ${styles.searchBtnContainer} `}>
-          <Button className={styles.searchBtn}>Szukaj</Button>
-          <Icon className={`icon-search ${styles.searchIcon2}`} />
+          <Button className={styles.searchBtn} tabIndex={0} ariaLabel="Szukaj">
+            Szukaj
+          </Button>
+          <Icon className={`icon-search ${styles.searchIcon2}`} role="presentation" />
         </Container>
       </Container>
     </>

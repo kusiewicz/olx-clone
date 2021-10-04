@@ -1,14 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Icon = ({ className, onClick, datatestid }) => (
-  <i className={className} onClick={onClick} data-testid={datatestid} />
+const Icon = ({ className, role, tabIndex, ariaLabel, onClick }) => (
+  <i
+    className={className}
+    role={role}
+    aria-label={ariaLabel}
+    tabIndex={tabIndex}
+    onClick={onClick}
+  />
 );
 
 Icon.propTypes = {
   className: PropTypes.string,
+  role: PropTypes.string,
+  tabIndex: PropTypes.number,
+  ariaLabel: PropTypes.string,
   onClick: PropTypes.func,
-  datatestid: PropTypes.string,
 };
 
 export default Icon;

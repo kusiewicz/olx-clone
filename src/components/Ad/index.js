@@ -6,12 +6,16 @@ import styles from './styles.module.scss';
 const Ad = ({ title, image, location, price, onClick }) => (
   <div className={`rel ${styles.adContainer}`}>
     <div className={`rel ${styles.imageWrapper}`}>
-      <img alt={title} src={image} />
-      <span className={styles.delivery} />
+      <a href="www.placeholder">
+        <img alt={title} src={image} />
+        <span className={styles.delivery} />
+      </a>
     </div>
-    <div className={styles.titleWrapper}>
-      <span className={styles.title}>{title}</span>
-    </div>
+    <a href="www.placeholder">
+      <div className={styles.titleWrapper}>
+        <span className={styles.title}>{title}</span>
+      </div>
+    </a>
     <span className={styles.location}>{location}</span>
     <span className={styles.price}>{`${price} zł`}</span>
     <div className={styles.favouriteWrapper}>

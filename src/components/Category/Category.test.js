@@ -11,20 +11,20 @@ const mocked = jest.fn();
 
 describe('Category', () => {
   describe('Render', () => {
-    it('should render the Category correctly', () => {
+    it('should render the Category', () => {
       render(<Category category="Sport" src={image} className="testClass" onClick={mocked} />);
-      expect(screen.getByRole('link', { name: /sport/i })).toBeInTheDocument();
+      expect(screen.getByRole('button', { name: /pokaż kategorię/i })).toBeInTheDocument();
     });
 
-    it('should render the image correctly', () => {
+    it('should render the image', () => {
       render(<Category category="Sport" src={image} className="testClass" onClick={mocked} />);
       expect(screen.getByRole('img', { name: /sport/i })).toBeInTheDocument();
     });
 
-    it('should call the function correctly', () => {
+    it('should call the function', () => {
       render(<Category category="Sport" src={image} className="testClass" onClick={mocked} />);
-      userEvent.click(screen.getByTestId('categoryBox'));
-      userEvent.click(screen.getByTestId('categoryBox'));
+      userEvent.click(screen.getByRole('button', { name: /pokaż kategorię/i }));
+      userEvent.click(screen.getByRole('button', { name: /pokaż kategorię/i }));
       expect(mocked).toHaveBeenCalledTimes(2);
     });
   });

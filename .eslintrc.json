@@ -4,7 +4,7 @@
     "es2021": true,
     "jest": true
   },
-  "extends": ["prettier", "airbnb"],
+  "extends": ["prettier", "airbnb", "plugin:jest-dom/recommended"],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -12,7 +12,13 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["prettier"],
+  "plugins": ["prettier", "testing-library", "jest-dom"],
+  "overrides": [
+    {
+      "files": ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
+      "extends": ["plugin:testing-library/react"]
+    }
+  ],
   "rules": {
     "prettier/prettier": ["error", { "singleQuote": true, "endOfLine": "auto", "printWidth": 100 }],
     "linebreak-style": 0,
@@ -23,6 +29,14 @@
     "object-curly-newline": "off",
     "jsx-a11y/click-events-have-key-events": 0,
     "jsx-a11y/no-static-element-interactions": 0,
-    "react/jsx-one-expression-per-line": "off"
+    "react/jsx-one-expression-per-line": "off",
+    "testing-library/await-async-query": "error",
+    "testing-library/no-await-sync-query": "error",
+    "testing-library/no-debug": "warn",
+    "testing-library/no-dom-import": "off",
+    "jest-dom/prefer-checked": "error",
+    "jest-dom/prefer-enabled-disabled": "error",
+    "jest-dom/prefer-required": "error",
+    "jest-dom/prefer-to-have-attribute": "error"
   }
 }

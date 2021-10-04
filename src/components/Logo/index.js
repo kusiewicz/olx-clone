@@ -15,4 +15,8 @@ Logo.propTypes = {
   size: PropTypes.string,
 };
 
+Logo.defaultProps = {
+  size: 'small',
+};
+
 export default Logo;

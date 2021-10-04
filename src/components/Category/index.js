@@ -6,7 +6,13 @@ const Category = ({ category, src, className, onClick }) => {
   console.log('category rendered');
   return (
     <>
-      <div data-testid="categoryBox" className={styles.CategoryContainer} onClick={onClick}>
+      <div
+        className={styles.CategoryContainer}
+        role="button"
+        aria-label="Pokaż kategorię"
+        onClick={onClick}
+        tabIndex={0}
+      >
         <img alt={category} className={`${className}`} src={src} />
         <a href="placeholder" className={styles.caption}>
           {category}

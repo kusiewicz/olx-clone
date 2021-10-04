@@ -18,7 +18,13 @@ const WarningBanner = ({ onClick }) => (
       >
         Dowiedz się więcej na blogu OLX
       </a>
-      <i className={`cancelSign ${styles.cancelIcon}`} onClick={() => onClick()} />
+      <i
+        className={`cancelSign ${styles.cancelIcon}`}
+        role="button"
+        aria-label="Zamknij banner"
+        tabIndex={0}
+        onClick={() => onClick()}
+      />
     </div>
   </div>
 );

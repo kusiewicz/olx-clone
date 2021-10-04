@@ -86,7 +86,6 @@ const Categories = () => {
               <SubCategories
                 category={activeCategory.name}
                 subCategory={activeCategory.subCategories}
-                visibility={visibility}
               />
             )}
           </React.Fragment>

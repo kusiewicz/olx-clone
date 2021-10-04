@@ -5,31 +5,24 @@ import SubCategories from './index';
 
 describe('SubCategories', () => {
   describe('Render', () => {
-    it('should render the SubCategories correctly', () => {
-      render(
-        <SubCategories category="Moda" subCategory={['Sukienki', 'Buty', 'Koszulki']} visibility />
-      );
-      expect(
-        screen.getByRole('link', { name: /Zobacz wszystkie ogłoszenia/i })
-      ).toBeInTheDocument();
+    it('should render the SubCategories component', () => {
+      render(<SubCategories category="Moda" subCategory={['Sukienki', 'Buty', 'Koszulki']} />);
+      expect(screen.getByRole('list')).toBeInTheDocument();
     });
 
-    it('should display a list of SubCategories', () => {
-      render(
-        <SubCategories category="Moda" subCategory={['Sukienki', 'Buty', 'Koszulki']} visibility />
-      );
-      expect(screen.getByRole('heading', { name: /sukienki/i })).toBeInTheDocument();
+    it('should display the heading text', () => {
+      render(<SubCategories category="Moda" subCategory={['Sukienki', 'Buty', 'Koszulki']} />);
+      expect(screen.getByRole('link', { name: /zobacz wszystkie ogłoszenia/i }));
     });
 
-    it('should contain the correct number of SubCategories', () => {
-      render(
-        <SubCategories
-          category="Moda"
-          subCategory={['Sukienki', 'Buty', 'Koszulki', 'Spodenki']}
-          visibility
-        />
-      );
-      expect(screen.getAllByRole('listitem').length).toBe(4);
+    it('should display the category name', () => {
+      render(<SubCategories category="Moda" subCategory={['Sukienki', 'Buty', 'Koszulki']} />);
+      expect(screen.getByRole('heading', { name: /moda/i }));
+    });
+
+    it('should display the subcategory name', () => {
+      render(<SubCategories category="Moda" subCategory={['Sukienki', 'Buty', 'Koszulki']} />);
+      expect(screen.getByRole('link', { name: /buty/i }));
     });
   });
 });
