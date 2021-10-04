@@ -9,13 +9,8 @@ const Search = () => {
   const [locationText, setLocationText] = useState('');
   const [warningBanner, setWarningBanner] = useState(true);
 
-  const cancelIcon = classnames(
-    'cancelSign',
-    `${styles.searchCancelIcon}`,
-    searchText ? 'visible' : 'invisible'
-  );
+  const cancelIcon = classnames(`${styles.searchCancelIcon}`, searchText ? 'visible' : 'invisible');
   const cancelIcon2 = classnames(
-    'cancelSign',
     `${styles.locationCancelIcon}`,
     locationText ? 'visible' : 'invisible'
   );
@@ -35,7 +30,12 @@ const Search = () => {
             placeholder="19 630 571 ogłoszeń blisko Ciebie"
             onChange={({ target }) => setSearchText(target.value)}
           />
-          <Icon className={cancelIcon} onClick={() => setSearchText('')} />
+          {/* popraw */}
+          <Icon
+            datatestid="search-clear"
+            className={cancelIcon}
+            onClick={() => setSearchText('')}
+          />
         </Container>
 
         <Container className={`flex cntr rel ${styles.locationContainer} `}>
@@ -47,7 +47,11 @@ const Search = () => {
             placeholder="Cała Polska"
             onChange={({ target }) => setLocationText(target.value)}
           />
-          <Icon className={cancelIcon2} onClick={() => setLocationText('')} />
+          <Icon
+            datatestid="location-clear"
+            className={cancelIcon2}
+            onClick={() => setLocationText('')}
+          />
         </Container>
 
         <Container className={`flex cntr ${styles.searchBtnContainer} `}>
