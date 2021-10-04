@@ -5,7 +5,7 @@ import SubCategories from './index';
 
 describe('SubCategories', () => {
   describe('Render', () => {
-    it('should render SubCategories properly', () => {
+    it('should render the SubCategories correctly', () => {
       render(
         <SubCategories category="Moda" subCategory={['Sukienki', 'Buty', 'Koszulki']} visibility />
       );

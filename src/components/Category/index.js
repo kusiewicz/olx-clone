@@ -6,7 +6,7 @@ const Category = ({ category, src, className, onClick }) => {
   console.log('category rendered');
   return (
     <>
-      <div className={styles.CategoryContainer} onClick={onClick}>
+      <div data-testid="categoryBox" className={styles.CategoryContainer} onClick={onClick}>
         <img alt={category} className={`${className}`} src={src} />
         <a href="placeholder" className={styles.caption}>
           {category}
