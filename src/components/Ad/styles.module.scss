@@ -115,6 +115,8 @@
 }
 
 .favouriteWrapper {
+  cursor: pointer;
+
   &:hover {
     .tooltip {
       display: block;

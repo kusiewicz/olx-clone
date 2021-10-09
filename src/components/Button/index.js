@@ -1,9 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import styles from './styles.module.scss';
+
 const Button = ({ className, children, ariaLabel, tabIndex }) => (
-  <div className={className} role="button" aria-label={ariaLabel} tabIndex={tabIndex}>
-    <h3>{children}</h3>
+  <div
+    className={`${styles.btn} ${className}`}
+    role="button"
+    aria-label={ariaLabel}
+    tabIndex={tabIndex}
+  >
+    <span>{children}</span>
   </div>
 );
 

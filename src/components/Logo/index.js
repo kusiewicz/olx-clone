@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import styles from './styles.module.scss';
 
 const Logo = ({ size }) => (
-  <div className={styles.logoContainer}>
+  <div className={styles.logoContainer} role="banner">
     <span className={size === 'small' ? `${styles.oSmall}` : `${styles.oBig}`} />
     <span className={size === 'small' ? `${styles.lSmall}` : `${styles.lBig}`} />
     <span className={size === 'small' ? `${styles.xSmall}` : `${styles.xBig}`} />
