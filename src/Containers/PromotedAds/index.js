@@ -13,6 +13,7 @@ const PromotedAds = () => (
         image="https://ireland.apollo.olxcdn.com/v1/files/65mcb3zxubud-PL/image;s=644x461"
         location="Lublin - dzisiaj 17:17"
         price={500}
+        delivery
       />
       <Ad
         title="BMW Seria 7 F01 750i 4.4 X Drive Full Opcja Vat 23% GWARANCJA"
