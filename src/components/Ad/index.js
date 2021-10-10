@@ -5,22 +5,31 @@ import styles from './styles.module.scss';
 
 const Ad = ({ title, image, location, price, delivery, onClick }) => (
   <article className={`rel ${styles.adContainer}`}>
-    <div className={`rel ${styles.imageWrapper}`}>
-      <a href="www.placeholder">
+    <div
+      className={`rel ${styles.imageWrapper}`}
+      role="button"
+      aria-label="Otwórz ogłoszenie"
+      tabIndex={0}
+    >
+      <a href="www.placeholder" className={`rel ${styles.imageWrapper}`}>
         <img alt={title} src={image} />
-        {delivery && <span className={styles.delivery} />}
+        {delivery && <span className={styles.delivery} role="img" aria-label="delivery" />}
       </a>
     </div>
-    <a href="www.placeholder">
-      <div className={styles.titleWrapper}>
+    <div className={styles.titleWrapper}>
+      <a href="www.placeholder" className={styles.titleWrapper}>
         <span className={styles.title}>{title}</span>
-      </div>
-    </a>
+      </a>
+    </div>
     <span className={styles.location}>{location}</span>
     <span className={styles.price}>{`${price} zł`}</span>
     <div className={styles.favouriteWrapper}>
-      <span className={styles.tooltip} tooltiptext="Obserwuj" />
-      <i className={`icon-heart-empty ${styles.icon}`} onClick={() => onClick()} />
+      <span className={styles.tooltip} role="tooltip" tooltiptext="Obserwuj" />
+      <i
+        role="presentation"
+        className={`icon-heart-empty ${styles.icon}`}
+        onClick={() => onClick()}
+      />
     </div>
   </article>
 );

@@ -1,5 +1,8 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import '@testing-library/jest-dom';
+
 import NavBar from './index';
 
 describe('NavBar', () => {
@@ -16,7 +19,7 @@ describe('NavBar', () => {
 
     it('should render button', () => {
       render(<NavBar />);
-      expect(screen.getByRole('button')).toBeInTheDocument();
+      expect(screen.getByRole('button', { name: /dodaj ogłoszenie/i })).toBeInTheDocument();
     });
   });
 });

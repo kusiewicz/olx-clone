@@ -52,7 +52,9 @@ const NavBar = () => {
               <Icon className={`icon-user-o white ${styles.userIcon}`} role="presentation" />
               <span className={`rel ${styles.olxText}`}>Mój OLX</span>
             </Container>
-            <Button className={styles.btn}>Dodaj ogłoszenie</Button>
+            <Button className={styles.btn} ariaLabel="Dodaj ogłoszenie" tabIndex={0}>
+              Dodaj ogłoszenie
+            </Button>
           </Container>
         </Container>
       </Container>
