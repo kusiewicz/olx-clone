@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Container, SearchBox, Button, Icon, WarningBanner } from '../../Components';
+import { Container, Button, Icon, WarningBanner, SearchBox } from '../../Components';
 
 import styles from './styles.module.scss';
 
-const Search = () => {
+const SearchContainer = () => {
   const [searchText, setSearchText] = useState('');
   const [locationText, setLocationText] = useState('');
   const [warningBanner, setWarningBanner] = useState(true);
@@ -14,45 +14,25 @@ const Search = () => {
         <WarningBanner onClick={() => setWarningBanner((prevValue) => !prevValue)} />
       )}
       <Container id="search" className={`indent flex cntr ${styles.searchSectionContainer}`}>
-        <Container className={`flex cntr ${styles.searchMainContainer}`}>
+        <SearchBox
+          boxClassName={styles.searchMainContainer}
+          inputClassName={styles.searchMainField}
+          value={searchText}
+          placeholder="19 630 571 ogłoszeń blisko Ciebie"
+          setText={(value) => setSearchText(value)}
+        >
           <Icon className={`icon-search ${styles.searchIcon1}`} role="presentation" />
-          <SearchBox
-            value={searchText}
-            className={`${styles.searchMainField}`}
-            placeholder="19 630 571 ogłoszeń blisko Ciebie"
-            onChange={({ target }) => setSearchText(target.value)}
-          />
-          {searchText && (
-            <Icon
-              className={`${styles.searchCancelIcon}`}
-              role="button"
-              tabIndex={0}
-              ariaLabel="wyczyść pole wyszukiwania"
-              onClick={() => setSearchText('')}
-            />
-          )}
-        </Container>
+        </SearchBox>
 
-        <Container className={`flex cntr rel ${styles.locationContainer} `}>
-          <span className={styles.tooltip} tooltiptext="Wybierz miasto lub kod pocztowy" />
+        <SearchBox
+          boxClassName={styles.locationContainer}
+          inputClassName={styles.locationField}
+          value={locationText}
+          placeholder="Cała Polska"
+          setText={(value) => setLocationText(value)}
+        >
           <Icon className={`icon-location-outline ${styles.locationIcon}`} />
-          <SearchBox
-            value={locationText}
-            className={`${styles.locationField}`}
-            placeholder="Cała Polska"
-            onChange={({ target }) => setLocationText(target.value)}
-          />
-          {locationText && (
-            <Icon
-              className={`${styles.locationCancelIcon}`}
-              role="button"
-              tabIndex={0}
-              ariaLabel="wyczyść pole lokalizacji"
-              onClick={() => setLocationText('')}
-            />
-          )}
-        </Container>
-
+        </SearchBox>
         <Container className={`flex cntr ${styles.searchBtnContainer} `}>
           <Button className={styles.searchBtn} tabIndex={0} ariaLabel="Szukaj">
             Szukaj
@@ -64,4 +44,4 @@ const Search = () => {
   );
 };
 
-export default Search;
+export default SearchContainer;

@@ -27,7 +27,7 @@ import {
   zwierzeta,
 } from '../../Assets/Images';
 
-const Categories = () => {
+const CategoriesContainer = () => {
   const [activeCategory, setActiveCategory] = useState({});
   const [visibility, setVisibility] = useState(false);
 
@@ -95,4 +95,4 @@ const Categories = () => {
   );
 };
 
-export default Categories;
+export default CategoriesContainer;

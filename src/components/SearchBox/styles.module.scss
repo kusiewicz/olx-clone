@@ -1,0 +1,14 @@
+@use '../../Assets/Styles/_mixins' as m;
+
+.cancelIcon {
+  @include m.cancelSign(27px, 27px);
+  margin-right: 19px;
+
+  &:before {
+    transform: translate(13px);
+  }
+
+  &:after {
+    transform: rotate(90deg) translate(-1px, -12px);
+  }
+}

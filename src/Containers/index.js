@@ -1,6 +1,6 @@
-export { default as NavBar } from './NavBar';
-export { default as Search } from './Search';
-export { default as Categories } from './Categories';
-export { default as PromotedAds } from './PromotedAds';
-export { default as Jumbotron } from './Jumbotron';
-export { default as Footer } from './Footer';
+export { default as NavBarContainer } from './NavBar';
+export { default as SearchContainer } from './Search';
+export { default as CategoriesContainer } from './Categories';
+export { default as PromotedAdsContainer } from './PromotedAds';
+export { default as JumbotronContainer } from './Jumbotron';
+export { default as FooterContainer } from './Footer';

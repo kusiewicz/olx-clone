@@ -1,15 +1,22 @@
 import React from 'react';
 
-import { NavBar, Search, Categories, PromotedAds, Jumbotron, Footer } from '../Containers';
+import {
+  NavBarContainer,
+  SearchContainer,
+  CategoriesContainer,
+  PromotedAdsContainer,
+  JumbotronContainer,
+  FooterContainer,
+} from '../Containers';
 
 const Home = () => (
   <>
-    <NavBar />
-    <Search />
-    <Categories />
-    <PromotedAds />
-    <Jumbotron />
-    <Footer />
+    <NavBarContainer />
+    <SearchContainer />
+    <CategoriesContainer />
+    <PromotedAdsContainer />
+    <JumbotronContainer />
+    <FooterContainer />
   </>
 );
 

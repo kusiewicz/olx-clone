@@ -3,7 +3,7 @@ import styles from './styles.module.scss';
 
 import { Container, Button, Logo } from '../../Components';
 
-const Jumbotron = () => (
+const JumbotronContainer = () => (
   <Container id="jumbotron" className={styles.jumbotronContainer}>
     <Container className={styles.businessContainer}>
       <Container className={`flex ${styles.businessWrapper}`}>
@@ -72,4 +72,4 @@ const Jumbotron = () => (
   </Container>
 );
 
-export default Jumbotron;
+export default JumbotronContainer;

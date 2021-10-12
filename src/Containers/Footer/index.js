@@ -3,7 +3,7 @@ import styles from './styles.module.scss';
 
 import { Container } from '../../Components';
 
-const Footer = () => (
+const FooterContainer = () => (
   <Container id="footer" className={`indent ${styles.footerContainer}`}>
     <Container className={`inblock ${styles.pointsLeft}`}>
       <ul className={styles.footerList}>
@@ -94,4 +94,4 @@ const Footer = () => (
   </Container>
 );
 
-export default Footer;
+export default FooterContainer;

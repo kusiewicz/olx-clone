@@ -20,6 +20,12 @@ i {
   padding: 40px 0;
 }
 
+.searchBoxContainer {
+  background-color: white;
+  width: 61%;
+  border-right: 1px solid v.$backgroundGrey;
+}
+
 .searchMainContainer,
 .locationContainer,
 .searchBtnContainer {
@@ -79,27 +85,6 @@ i {
   margin-left: 3px;
 }
 
-.searchCancelIcon,
-.locationCancelIcon {
-  @include m.cancelSign(27px, 27px);
-  margin: 0 15px;
-
-  &:before {
-    transform: translate(13px);
-  }
-
-  &:after {
-    transform: rotate(90deg) translate(-1px, -12px);
-  }
-}
-
-.searchCancelIcon {
-  margin-right: 19px;
-}
-
-.locationCancelIcon {
-  margin: 0 15px;
-}
 
 .tooltip {
   width: 244px;

@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import styles from './styles.module.scss';
 import { Container, Logo, Icon, Button, SubLogo } from '../../Components';
 
-const NavBar = () => {
+const NavBarContainer = () => {
   const [scrolled, setScrolled] = useState(false);
   const prevScroll = useRef(0);
 
@@ -62,4 +62,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default NavBarContainer;
