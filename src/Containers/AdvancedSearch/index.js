@@ -6,6 +6,8 @@ import styles from './styles.module.scss';
 const AdvancedSearchContainer = () => {
   const [searchText, setSearchText] = useState('');
   const [locationText, setLocationText] = useState('');
+  const [distance, setDistance] = useState(0);
+  const [toggleDistance, setToggleDistance] = useState(false);
 
   return (
     <>
@@ -28,21 +30,43 @@ const AdvancedSearchContainer = () => {
           <Icon className={`icon-location-outline ${styles.locationIcon}`} role="presentation" />
         </SearchBox>
 
-        <Container className={`flex ${styles.distanceContainer}`}>
-          <h4 className={styles.distance}>+ 0 km</h4>
+        <Container
+          className={`flex ${styles.distanceContainer}`}
+          onClick={() => setToggleDistance(true)}
+        >
+          <h4 className={styles.distance}>{`+ ${distance} km`}</h4>
           <Icon className={`icon-down-open-big ${styles.arrowIcon}`} role="presentation" />
-
-          <ul className={styles.dropdown}>
-            <li>+ 0 km</li>
-            <li>+ 2 km</li>
-            <li>+ 5 km</li>
-            <li>+ 10 km</li>
-            <li>+ 15 km</li>
-            <li>+ 30 km</li>
-            <li>+ 50 km</li>
-            <li>+ 75 km</li>
-            <li>+ 100 km</li>
-          </ul>
+          {toggleDistance && (
+            <Container role="menu" className={styles.dropdown}>
+              <li role="menuitem" onClick={() => setDistance(0)}>
+                + 0 km
+              </li>
+              <li role="menuitem" onClick={() => setDistance(2)}>
+                + 2 km
+              </li>
+              <li role="menuitem" onClick={() => setDistance(5)}>
+                + 5 km
+              </li>
+              <li role="menuitem" onClick={() => setDistance(10)}>
+                + 10 km
+              </li>
+              <li role="menuitem" onClick={() => setDistance(15)}>
+                + 15 km
+              </li>
+              <li role="menuitem" onClick={() => setDistance(30)}>
+                + 30 km
+              </li>
+              <li role="menuitem" onClick={() => setDistance(50)}>
+                + 50 km
+              </li>
+              <li role="menuitem" onClick={() => setDistance(75)}>
+                + 75 km
+              </li>
+              <li role="menuitem" onClick={() => setDistance(100)}>
+                + 100 km
+              </li>
+            </Container>
+          )}
         </Container>
 
         <Container className={`flex cntr ${styles.searchBtnContainer} `}>

@@ -58,7 +58,7 @@ const CategoriesContainer = () => {
     setActiveCategory(category);
     if (category.subCategories) {
       if (activeCategory.name === category.name) {
-        setVisibility((e) => !e);
+        setVisibility((v) => !v);
       } else {
         setVisibility(true);
       }
