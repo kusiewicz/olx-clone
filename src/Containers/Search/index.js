@@ -31,7 +31,7 @@ const SearchContainer = () => {
           placeholder="Cała Polska"
           setText={(value) => setLocationText(value)}
         >
-          <Icon className={`icon-location-outline ${styles.locationIcon}`} />
+          <Icon className={`icon-location-outline ${styles.locationIcon}`} role="presentation" />
         </SearchBox>
         <Container className={`flex cntr ${styles.searchBtnContainer} `}>
           <Button className={styles.searchBtn} tabIndex={0} ariaLabel="Szukaj">

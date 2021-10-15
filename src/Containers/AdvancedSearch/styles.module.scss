@@ -1,0 +1,109 @@
+@use '../../Assets/Styles/_variables' as v;
+@use '../../Assets/Styles/_mixins' as m;
+/* containers */
+
+%inputFields {
+  height: 56px;
+  padding: 8px 0;
+  border: none;
+  color: v.$darkGreen;
+  margin-right: auto;
+}
+
+.searchSectionContainer {
+  padding: 40px 0;
+}
+
+.searchMainContainer,
+.locationContainer,
+.distanceContainer,
+.searchBtnContainer {
+  background-color: white;
+}
+
+.searchMainContainer {
+  width: 53%;
+  border-right: 1px solid v.$backgroundGrey;
+}
+
+.locationContainer {
+  width: 26%;
+  border-right: 1px solid v.$backgroundGrey;
+}
+
+.searchMainField {
+  @extend %inputFields;
+  width: 86%;
+  margin-left: 25px;
+  color: #406367;
+}
+
+.locationField {
+  @extend %inputFields;
+  width: 60%;
+}
+
+.distanceContainer {
+  @extend %inputFields;
+  width: 10%;
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+  border-right: 1px solid v.$backgroundGrey;
+  font-family: Geomanist-Regular;
+}
+
+.distance {
+  font-size: 16px;
+  color: #9b9b9b;
+}
+
+.arrowIcon {
+  font-size: 23px;
+  color: #9b9b9b;
+}
+
+.dropdown {
+  position: absolute;
+  width: 100%;
+  top: 72px;
+  border: 1px solid #f2f4f5;
+  border-top: none;
+  height: 250px;
+  overflow-y: scroll;
+
+  li {
+    color: #9b9b9b;
+    padding: 8px 16px;
+    font-family: Geomanist-Regular;
+    background-color: white;
+  }
+}
+
+.searchBtnContainer {
+  @extend %inputFields;
+  width: 12%;
+
+  &:hover {
+    background-color: v.$darkGreen;
+    color: white;
+
+    h3 {
+      color: white;
+    }
+
+    i {
+      color: white;
+    }
+  }
+}
+
+.locationIcon {
+  font-size: 20px;
+  margin-left: 20px;
+  margin-right: 12px;
+}
+
+.searchIcon {
+  font-size: 26px;
+}
