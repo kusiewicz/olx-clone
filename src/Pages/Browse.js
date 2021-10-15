@@ -1,13 +1,13 @@
-// import React from 'react';
+import React from 'react';
 
-// import { NavBar, Search, Footer, SearchBox } from '../Components';
+import { NavBarContainer, AdvancedSearchContainer, FooterContainer } from '../Containers';
 
-// const Browse = () => (
-//   <>
-//     <NavBar />
-//     <Search />
-//     <Footer />
-//   </>
-// );
+const Browse = () => (
+  <>
+    <NavBarContainer />
+    <AdvancedSearchContainer />
+    <FooterContainer />
+  </>
+);
 
-// export default Browse;
+export default Browse;
