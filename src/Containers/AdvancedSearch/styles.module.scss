@@ -43,9 +43,12 @@
   width: 60%;
 }
 
+.refContainer {
+  width: 11%;
+}
+
 .distanceContainer {
   @extend %inputFields;
-  width: 10%;
   position: relative;
   justify-content: space-around;
   align-items: center;
@@ -96,7 +99,7 @@
 
 .searchBtnContainer {
   @extend %inputFields;
-  width: 13%;
+  width: 12%;
 
   &:hover {
     background-color: v.$darkGreen;
