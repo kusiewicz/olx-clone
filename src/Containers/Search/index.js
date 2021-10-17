@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Container, Button, Icon, WarningBanner, SearchBox } from '../../Components';
+import { Link } from 'react-router-dom';
+import { Container, HoverButton, Icon, WarningBanner, SearchBox } from '../../Components';
 
 import styles from './styles.module.scss';
 
@@ -33,12 +34,12 @@ const SearchContainer = () => {
         >
           <Icon className={`icon-location-outline ${styles.locationIcon}`} role="presentation" />
         </SearchBox>
-        <Container className={`flex cntr ${styles.searchBtnContainer} `}>
-          <Button className={styles.searchBtn} tabIndex={0} ariaLabel="Szukaj">
+        <Link className={`flex cntr ${styles.searchBtnContainer} `} to={`oferty/${searchText}`}>
+          <HoverButton className={styles.searchBtn} tabIndex={0} ariaLabel="Szukaj">
             Szukaj
-          </Button>
+          </HoverButton>
           <Icon className={`icon-search ${styles.searchIcon2}`} role="presentation" />
-        </Container>
+        </Link>
       </Container>
     </>
   );

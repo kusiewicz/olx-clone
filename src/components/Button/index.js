@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import styles from './styles.module.scss';
 
-const Button = ({ className, children, ariaLabel, tabIndex }) => (
+// eslint-disable-next-line no-unused-vars
+const HoverButton = ({ className, children, ariaLabel, tabIndex, color }) => (
   <div
-    className={`${styles.btn} ${className}`}
+    className={`${color && styles[`${color}Btn`]} ${className}`}
     role="button"
     aria-label={ariaLabel}
     tabIndex={tabIndex}
@@ -14,11 +14,12 @@ const Button = ({ className, children, ariaLabel, tabIndex }) => (
   </div>
 );
 
-Button.propTypes = {
+HoverButton.propTypes = {
   className: PropTypes.string,
   children: PropTypes.string,
   ariaLabel: PropTypes.string,
   tabIndex: PropTypes.number,
+  color: PropTypes.string,
 };
 
-export default Button;
+export default HoverButton;

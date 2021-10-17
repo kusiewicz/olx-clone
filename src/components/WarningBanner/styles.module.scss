@@ -58,7 +58,6 @@
 
 .cancelIcon {
   @include m.cancelSign(20px, 20px);
-  cursor: pointer;
 
   &::before {
     transform: translate(9px);

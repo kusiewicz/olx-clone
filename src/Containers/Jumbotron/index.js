@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './styles.module.scss';
 
-import { Container, Button, Logo } from '../../Components';
+import { Container, HoverButton, Logo } from '../../Components';
 
 const JumbotronContainer = () => (
   <Container id="jumbotron" className={styles.jumbotronContainer}>
@@ -13,7 +13,9 @@ const JumbotronContainer = () => (
           <h3 className={styles.businessSubText}>Poznaj ofertę OLX dla biznesu</h3>
         </Container>
         <a href="https://biznes.olx.pl/">
-          <Button className={styles.businessButton}>Zobacz szczegóły</Button>
+          <HoverButton color="white" className={styles.businessButton}>
+            Zobacz szczegóły
+          </HoverButton>
         </a>
       </Container>
     </Container>

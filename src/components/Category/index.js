@@ -12,9 +12,9 @@ const Category = ({ category, src, className, onClick }) => (
       tabIndex={0}
     >
       <img alt={category} className={`${className}`} src={src} />
-      <a href="placeholder" className={styles.caption}>
+      <span href="s" className={styles.caption}>
         {category}
-      </a>
+      </span>
     </div>
   </>
 );

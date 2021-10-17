@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import styles from './styles.module.scss';
-import { Container, Logo, Icon, Button, SubLogo } from '../../Components';
+import { Container, Logo, Icon, HoverButton, SubLogo } from '../../Components';
 
 const NavBarContainer = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -35,7 +35,7 @@ const NavBarContainer = () => {
         role="navigation"
       >
         <Container className={`flex ${styles.wrapper}`}>
-          <a href="http://www.olx.pl" className="rel">
+          <a href="http://localhost:3000/" className="rel">
             <Logo color="turquoise" size="small" />
             <SubLogo />
           </a>
@@ -52,9 +52,14 @@ const NavBarContainer = () => {
               <Icon className={`icon-user-o white ${styles.userIcon}`} role="presentation" />
               <span className={`rel ${styles.olxText}`}>Mój OLX</span>
             </Container>
-            <Button className={styles.btn} ariaLabel="Dodaj ogłoszenie" tabIndex={0}>
+            <HoverButton
+              className={styles.btn}
+              color="white"
+              ariaLabel="Dodaj ogłoszenie"
+              tabIndex={0}
+            >
               Dodaj ogłoszenie
-            </Button>
+            </HoverButton>
           </Container>
         </Container>
       </Container>

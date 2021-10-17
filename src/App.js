@@ -6,7 +6,11 @@ import { Home, Browse } from './Pages';
 const App = () => (
   <Router>
     <Switch>
-      <Route path="/search">
+      <Route path="/oferty/:szukane">
+        <Browse />
+      </Route>
+
+      <Route path="/:category">
         <Browse />
       </Route>
 

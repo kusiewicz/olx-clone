@@ -1,3 +1,10 @@
-.btn {
-  cursor: pointer;
+@use '../../Assets/Styles/_variables' as v;
+@use '../../Assets/Styles/_mixins.scss' as m;
+
+.whiteBtn {
+  @include m.buttonColor(white, v.$darkGreen);
+}
+
+.greenBtn {
+  @include m.buttonColor(v.$darkGreen, white);
 }

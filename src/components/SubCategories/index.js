@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import propTypes from 'prop-types';
 import styles from './styles.module.scss';
 
@@ -6,9 +7,9 @@ const SubCategories = ({ category, subCategory }) => (
   <div className={styles.subCategoriesContainer} role="list">
     <div role="listitem" className={styles.subCategoriesHeader}>
       <i className={`icon-right-open-big ${styles.icon}`} />
-      <a href="placeholder" className="inblock">
+      <Link to={`/${category}`} className="inblock">
         Zobacz wszystkie ogłoszenia
-      </a>
+      </Link>
       <h3 className={`inblock ${styles.category}`}>&nbsp;{`w ${category}`}</h3>
     </div>
     <div className={styles.subCategories}>

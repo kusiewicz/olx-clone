@@ -46,24 +46,12 @@
 }
 
 .businessButton {
-  background-color: white;
-  color: v.$darkGreen;
   font-size: 14px;
   font-weight: 500;
   border-radius: 4px;
-  transition: all 0.3s ease;
   padding: 12px 22px;
   min-width: 133px;
   text-align: center;
-
-  &:hover {
-    background: none;
-    box-shadow: inset 0 0 0 5px white;
-
-    span {
-      color: white;
-    }
-  }
 }
 
 .infoContainer {

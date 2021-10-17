@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
-import { Container, SearchBox, Icon, Button } from '../../Components';
+// import propTypes from 'prop-types';
+import { Container, SearchBox, Icon, HoverButton } from '../../Components';
 import { useComponentVisibility } from '../../Hooks';
 import styles from './styles.module.scss';
 
 const AdvancedSearchContainer = () => {
-  const [searchText, setSearchText] = useState('');
+  const [searchText, setSearchText] = useState();
   const [locationText, setLocationText] = useState('');
   const [distance, setDistance] = useState(0);
   // const [toggleDistance, setToggleDistance] = useState(false);
 
   const { isVisible, setIsVisible, ref } = useComponentVisibility(false, 'click');
-
   return (
     <>
       <Container id="search" className={`indent flex cntr ${styles.searchSectionContainer}`}>
@@ -119,14 +119,18 @@ const AdvancedSearchContainer = () => {
         </div>
 
         <Container className={`flex cntr ${styles.searchBtnContainer} `}>
-          <Button className={styles.searchBtn} tabIndex={0} ariaLabel="Szukaj">
+          <HoverButton className={styles.searchBtn} tabIndex={0} ariaLabel="Szukaj">
             Szukaj
-          </Button>
+          </HoverButton>
           <Icon className={`icon-search ${styles.searchIcon}`} role="presentation" />
         </Container>
       </Container>
     </>
   );
 };
+
+// AdvancedSearchContainer.propTypes = {
+//   szukane: propTypes.string,
+// };
 
 export default AdvancedSearchContainer;

@@ -28,13 +28,13 @@ i {
 
 .searchBtnContainer {
   @extend %inputFields;
-  width: 13%;
+  width: 12%;
 
   &:hover {
     background-color: v.$darkGreen;
     color: white;
 
-    h3 {
+    span {
       color: white;
     }
 
@@ -50,7 +50,7 @@ i {
 }
 
 .locationContainer {
-  width: 26%;
+  width: 27%;
   border-right: 1px solid v.$backgroundGrey;
 }
 
@@ -78,7 +78,6 @@ i {
   padding: 0 17px;
   margin-left: 3px;
 }
-
 
 .tooltip {
   width: 244px;
