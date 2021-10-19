@@ -1,33 +1,30 @@
 import React, { useState } from 'react';
-// import propTypes from 'prop-types';
+import propTypes from 'prop-types';
 import { Container, SearchBox, Icon, HoverButton } from '../../Components';
 import { useComponentVisibility } from '../../Hooks';
 import styles from './styles.module.scss';
 
-const AdvancedSearchContainer = () => {
-  const [searchText, setSearchText] = useState();
-  const [locationText, setLocationText] = useState('');
+export const BrowseSearchContainer = ({ searchTerm, setSearchTerm, location, setLocation }) => {
   const [distance, setDistance] = useState(0);
-  // const [toggleDistance, setToggleDistance] = useState(false);
-
   const { isVisible, setIsVisible, ref } = useComponentVisibility(false, 'click');
+
   return (
     <>
       <Container id="search" className={`indent flex cntr ${styles.searchSectionContainer}`}>
         <SearchBox
           boxClassName={styles.searchMainContainer}
           inputClassName={styles.searchMainField}
-          value={searchText}
+          value={searchTerm}
           placeholder="Szukaj..."
-          setText={(value) => setSearchText(value)}
+          setText={(value) => setSearchTerm(value)}
         />
 
         <SearchBox
           boxClassName={styles.locationContainer}
           inputClassName={styles.locationField}
-          value={locationText}
+          value={location}
           placeholder="Cała Polska"
-          setText={(value) => setLocationText(value)}
+          setText={(value) => setLocation(value)}
         >
           <Icon className={`icon-location-outline ${styles.locationIcon}`} role="presentation" />
         </SearchBox>
@@ -129,8 +126,9 @@ const AdvancedSearchContainer = () => {
   );
 };
 
-// AdvancedSearchContainer.propTypes = {
-//   szukane: propTypes.string,
-// };
-
-export default AdvancedSearchContainer;
+BrowseSearchContainer.propTypes = {
+  searchTerm: propTypes.string,
+  setSearchTerm: propTypes.func,
+  location: propTypes.string,
+  setLocation: propTypes.func,
+};

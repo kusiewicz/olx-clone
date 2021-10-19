@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './styles.module.scss';
 
-// eslint-disable-next-line no-unused-vars
 const HoverButton = ({ className, children, ariaLabel, tabIndex, color }) => (
   <div
     className={`${color && styles[`${color}Btn`]} ${className}`}

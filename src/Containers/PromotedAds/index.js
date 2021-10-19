@@ -4,7 +4,7 @@ import { Container, Ad } from '../../Components';
 
 import styles from './styles.module.scss';
 
-const PromotedAdsContainer = () => (
+export const PromotedAdsContainer = () => (
   <Container id="promotedAds" className={`${styles.promotedAdsContainer}`}>
     <h1 className={styles.title}>Ogłoszenia promowane</h1>
     <Container className={`indent ${styles.promotedAdsWrapper}`}>
@@ -48,5 +48,3 @@ const PromotedAdsContainer = () => (
     </Container>
   </Container>
 );
-
-export default PromotedAdsContainer;

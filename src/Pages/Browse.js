@@ -1,16 +1,14 @@
-import React, { useState } from 'react';
-import { NavBarContainer, AdvancedSearchContainer, FooterContainer } from '../Containers';
+import React from 'react';
+import { NavBarContainer } from '../Containers/NavBar';
+import { BrowseContainer } from '../Containers/Browse';
+import { FooterContainer } from '../Containers/Footer';
 
-// eslint-disable-next-line arrow-body-style
-const Browse = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  return (
-    <>
-      <NavBarContainer />
-      <AdvancedSearchContainer searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-      <FooterContainer />
-    </>
-  );
-};
+const Browse = () => (
+  <>
+    <NavBarContainer />
+    <BrowseContainer />
+    <FooterContainer />
+  </>
+);
 
 export default Browse;

@@ -1,13 +1,28 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { Container, HoverButton, Icon, WarningBanner, SearchBox } from '../../Components';
 
 import styles from './styles.module.scss';
 
-const SearchContainer = () => {
-  const [searchText, setSearchText] = useState('');
-  const [locationText, setLocationText] = useState('');
+export const HomeSearchContainer = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [locationTerm, setLocationTerm] = useState('');
   const [warningBanner, setWarningBanner] = useState(true);
+  const history = useHistory();
+
+  const getLink = () => {
+    let link;
+
+    if (searchTerm && locationTerm) {
+      link = `oferty/${locationTerm}/q-${searchTerm}`;
+    } else if (searchTerm && !locationTerm) {
+      link = `oferty/q-${searchTerm}`;
+    } else if (!searchTerm && locationTerm) {
+      link = `oferty/${locationTerm}`;
+    } else link = 'oferty/';
+
+    return link;
+  };
 
   return (
     <>
@@ -18,9 +33,9 @@ const SearchContainer = () => {
         <SearchBox
           boxClassName={styles.searchMainContainer}
           inputClassName={styles.searchMainField}
-          value={searchText}
+          value={searchTerm}
           placeholder="19 630 571 ogłoszeń blisko Ciebie"
-          setText={(value) => setSearchText(value)}
+          setText={(value) => setSearchTerm(value)}
         >
           <Icon className={`icon-search ${styles.searchIcon1}`} role="presentation" />
         </SearchBox>
@@ -28,21 +43,22 @@ const SearchContainer = () => {
         <SearchBox
           boxClassName={styles.locationContainer}
           inputClassName={styles.locationField}
-          value={locationText}
+          value={locationTerm}
           placeholder="Cała Polska"
-          setText={(value) => setLocationText(value)}
+          setText={(value) => setLocationTerm(value)}
         >
           <Icon className={`icon-location-outline ${styles.locationIcon}`} role="presentation" />
         </SearchBox>
-        <Link className={`flex cntr ${styles.searchBtnContainer} `} to={`oferty/${searchText}`}>
+        <Container
+          className={`flex cntr ${styles.searchBtnContainer}`}
+          onClick={() => history.push(getLink())}
+        >
           <HoverButton className={styles.searchBtn} tabIndex={0} ariaLabel="Szukaj">
             Szukaj
           </HoverButton>
           <Icon className={`icon-search ${styles.searchIcon2}`} role="presentation" />
-        </Link>
+        </Container>
       </Container>
     </>
   );
 };
-
-export default SearchContainer;
