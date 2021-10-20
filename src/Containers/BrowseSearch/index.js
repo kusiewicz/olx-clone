@@ -1,12 +1,21 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import propTypes from 'prop-types';
 import { Container, SearchBox, Icon, HoverButton } from '../../Components';
 import { useComponentVisibility } from '../../Hooks';
 import styles from './styles.module.scss';
 
-export const BrowseSearchContainer = ({ searchTerm, setSearchTerm, location, setLocation }) => {
+export const BrowseSearchContainer = ({
+  searchTerm,
+  setSearchTerm,
+  locationTerm,
+  setLocationTerm,
+  link,
+}) => {
   const [distance, setDistance] = useState(0);
   const { isVisible, setIsVisible, ref } = useComponentVisibility(false, 'click');
+  const history = useHistory();
+  console.log(link);
 
   return (
     <>
@@ -22,9 +31,9 @@ export const BrowseSearchContainer = ({ searchTerm, setSearchTerm, location, set
         <SearchBox
           boxClassName={styles.locationContainer}
           inputClassName={styles.locationField}
-          value={location}
+          value={locationTerm}
           placeholder="Cała Polska"
-          setText={(value) => setLocation(value)}
+          setText={(value) => setLocationTerm(value)}
         >
           <Icon className={`icon-location-outline ${styles.locationIcon}`} role="presentation" />
         </SearchBox>
@@ -115,7 +124,10 @@ export const BrowseSearchContainer = ({ searchTerm, setSearchTerm, location, set
           </Container>
         </div>
 
-        <Container className={`flex cntr ${styles.searchBtnContainer} `}>
+        <Container
+          className={`flex cntr ${styles.searchBtnContainer}`}
+          onClick={() => history.push('/essa')}
+        >
           <HoverButton className={styles.searchBtn} tabIndex={0} ariaLabel="Szukaj">
             Szukaj
           </HoverButton>
@@ -129,6 +141,7 @@ export const BrowseSearchContainer = ({ searchTerm, setSearchTerm, location, set
 BrowseSearchContainer.propTypes = {
   searchTerm: propTypes.string,
   setSearchTerm: propTypes.func,
-  location: propTypes.string,
-  setLocation: propTypes.func,
+  locationTerm: propTypes.string,
+  setLocationTerm: propTypes.func,
+  link: propTypes.string,
 };

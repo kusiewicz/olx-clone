@@ -3,13 +3,10 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import { Home, Browse } from './Pages';
 
-// const browsePath = '/oferty/(:location|q-:search)?';
-// const browsePath = '/oferty/:location/q-search?';
-
 const App = () => (
   <Router>
     <Switch>
-      <Route path={browsePath}>
+      <Route path="/oferty">
         <Browse />
       </Route>
 

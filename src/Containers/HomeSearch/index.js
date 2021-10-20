@@ -14,11 +14,11 @@ export const HomeSearchContainer = () => {
     let link;
 
     if (searchTerm && locationTerm) {
-      link = `oferty/${locationTerm}/q-${searchTerm}`;
+      link = `oferty/?loc=${locationTerm}&q=${searchTerm}`;
     } else if (searchTerm && !locationTerm) {
-      link = `oferty/q-${searchTerm}`;
+      link = `oferty/?q=${searchTerm}`;
     } else if (!searchTerm && locationTerm) {
-      link = `oferty/${locationTerm}`;
+      link = `oferty/?loc=${locationTerm}`;
     } else link = 'oferty/';
 
     return link;
