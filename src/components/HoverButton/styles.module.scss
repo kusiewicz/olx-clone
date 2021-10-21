@@ -8,3 +8,7 @@
 .greenBtn {
   @include m.buttonColor(v.$darkGreen, white);
 }
+
+.greyBtn {
+  @include m.buttonColor(v.$backgroundGrey, v.$darkGreen);
+}

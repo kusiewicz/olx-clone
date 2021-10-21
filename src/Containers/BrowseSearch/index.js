@@ -15,11 +15,10 @@ export const BrowseSearchContainer = ({
   const [distance, setDistance] = useState(0);
   const { isVisible, setIsVisible, ref } = useComponentVisibility(false, 'click');
   const history = useHistory();
-  console.log(link);
 
   return (
     <>
-      <Container id="search" className={`indent flex cntr ${styles.searchSectionContainer}`}>
+      <Container id="search" className={`flex cntr ${styles.searchSectionContainer}`}>
         <SearchBox
           boxClassName={styles.searchMainContainer}
           inputClassName={styles.searchMainField}
@@ -126,7 +125,7 @@ export const BrowseSearchContainer = ({
 
         <Container
           className={`flex cntr ${styles.searchBtnContainer}`}
-          onClick={() => history.push('/essa')}
+          onClick={() => history.replace(link)}
         >
           <HoverButton className={styles.searchBtn} tabIndex={0} ariaLabel="Szukaj">
             Szukaj

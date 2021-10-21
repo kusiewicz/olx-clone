@@ -1,7 +1,11 @@
+/* eslint-disable */
 import React, { useState } from 'react';
 import queryString from 'query-string';
 import { useLocation } from 'react-router-dom';
+import { Container, HoverButton, Icon } from '../../Components';
 import { BrowseSearchContainer } from '../BrowseSearch';
+
+import styles from './styles.module.scss';
 
 export const BrowseContainer = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -14,12 +18,12 @@ export const BrowseContainer = () => {
     let link;
 
     if (searchTerm && locationTerm) {
-      link = `oferty/?loc=${locationTerm}&q=${searchTerm}`;
+      link = `/oferty/?loc=${locationTerm}&q=${searchTerm}`;
     } else if (searchTerm && !locationTerm) {
-      link = `oferty/?q=${searchTerm}`;
+      link = `/oferty/?q=${searchTerm}`;
     } else if (!searchTerm && locationTerm) {
-      link = `oferty/?loc=${locationTerm}`;
-    } else link = 'oferty/';
+      link = `/oferty/?loc=${locationTerm}`;
+    } else link = '/oferty';
 
     return link;
   };
@@ -31,13 +35,59 @@ export const BrowseContainer = () => {
 
   return (
     <>
-      <BrowseSearchContainer
-        searchTerm={searchTerm}
-        setSearchTerm={setSearchTerm}
-        locationTerm={locationTerm}
-        setLocationTerm={setLocationTerm}
-        link={getLink()}
-      />
+      <Container className="indent">
+        <BrowseSearchContainer
+          searchTerm={searchTerm}
+          setSearchTerm={setSearchTerm}
+          locationTerm={locationTerm}
+          setLocationTerm={setLocationTerm}
+          link={getLink()}
+        />
+        <Container className={`${styles.browseOptionsContainer} flex`}>
+          <Container className="flex">
+            <Container className={`rel ${styles.checkboxWrapper}`}>
+              <Container className={`inblock ${styles.middle}`}>
+                <input type="checkbox" id="desc" className={styles.checkbox} />
+                <label for="desc" className="rel" />
+              </Container>
+              <Container className={`inblock ${styles.middle}`}>
+                <label for="desc" className={styles.labelText}>
+                  szukaj również w opisach
+                </label>
+              </Container>
+            </Container>
+
+            <Container className={`rel ${styles.checkboxWrapper}`}>
+              <Container className={`inblock ${styles.middle}`}>
+                <input type="checkbox" id="photoOnly" className={styles.checkbox} />
+                <label for="photoOnly" className="rel" />
+              </Container>
+              <Container className={`inblock ${styles.middle}`}>
+                <label for="photoOnly" className={styles.labelText}>
+                  tylko ze zdjęciem
+                </label>
+              </Container>
+            </Container>
+
+            <Container className={`rel ${styles.checkboxWrapper}`}>
+              <Container className={`inblock ${styles.middle}`}>
+                <input type="checkbox" id="delivery" className={styles.checkbox} />
+                <label for="delivery" className="rel" />
+              </Container>
+              <Container className={`inblock ${styles.middle}`}>
+                <label for="delivery" className={styles.labelText}>
+                  <span className={styles.delivery} role="img" aria-label="delivery" />
+                  tylko z przesyłką OLX
+                </label>
+              </Container>
+            </Container>
+          </Container>
+          <HoverButton className={styles.button}>
+            <Icon className={`icon-heart-empty ${styles.heartIcon}`} role="presentation" />
+            <span>Obserwuj wyszukiwanie</span>
+          </HoverButton>
+        </Container>
+      </Container>
     </>
   );
 };

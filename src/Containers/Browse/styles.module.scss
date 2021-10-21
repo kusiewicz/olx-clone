@@ -1,0 +1,114 @@
+@use '../../Assets/Styles/variables' as v;
+
+.browseOptionsContainer {
+  justify-content: space-between;
+}
+
+.checkboxWrapper {
+  margin-right: 20px;
+}
+
+.middle {
+  vertical-align: middle;
+}
+
+.checkbox {
+  width: 22px;
+  height: 22px;
+
+  &::before {
+    background-color: white;
+    width: 22px;
+    height: 22px;
+    border: 2px solid v.$darkGreen;
+    border-radius: 4px;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  + label {
+    &::before,
+    &::after {
+      content: '';
+      height: 0;
+      width: 0;
+      background-color: white;
+      position: absolute;
+    }
+
+    &::before {
+      bottom: 4px;
+      left: -17px;
+      transform: rotate(135deg);
+      transition: 0.2s ease;
+    }
+
+    &::after {
+      transform: rotate(45deg);
+      bottom: 3px;
+      right: 5px;
+    }
+  }
+
+  &:checked {
+    &::before {
+      background-color: v.$darkGreen;
+      content: '';
+      color: white;
+    }
+
+    + label {
+      &::before {
+        height: 10px;
+        width: 2px;
+      }
+
+      &::after {
+        height: 19px;
+        width: 2px;
+      }
+    }
+  }
+}
+
+.delivery {
+  width: 25px;
+  height: 20px;
+  background: url('../../Assets/Images/truck.png') no-repeat center;
+  background-size: cover;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 7px;
+}
+
+.labelText {
+  margin-left: 12px;
+  font-size: 14px;
+  color: #7f9799;
+  font-family: Geomanist-Regular;
+  font-weight: 300;
+}
+
+.button {
+  border: 2px solid v.$darkGreen;
+  border-radius: 4px;
+  padding: 8px 8px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: inset 0 0 0 3px #002f34;
+  }
+
+  span {
+    position: relative;
+    bottom: 1px;
+  }
+}
+
+.heartIcon {
+  font-size: 18px;
+  margin-right: 5px;
+}
