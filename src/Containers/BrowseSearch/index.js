@@ -6,9 +6,9 @@ import { useComponentVisibility } from '../../Hooks';
 import styles from './styles.module.scss';
 
 export const BrowseSearchContainer = ({
-  searchTerm,
+  searchTerm = '',
   setSearchTerm,
-  locationTerm,
+  locationTerm = '',
   setLocationTerm,
   link,
 }) => {

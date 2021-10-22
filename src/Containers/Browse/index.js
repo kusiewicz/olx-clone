@@ -10,8 +10,10 @@ import styles from './styles.module.scss';
 export const BrowseContainer = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [locationTerm, setLocationTerm] = useState('');
+  const [searchInDescription, setSearchInDescription] = useState(false);
+  const [withDelivery, setWithDelivery] = useState(false);
+  const [photoOnly, setPhotoOnly] = useState(false);
   const { search } = useLocation();
-
   const { q, loc } = queryString.parse(search);
 
   const getLink = () => {
@@ -47,11 +49,17 @@ export const BrowseContainer = () => {
           <Container className="flex">
             <Container className={`rel ${styles.checkboxWrapper}`}>
               <Container className={`inblock ${styles.middle}`}>
-                <input type="checkbox" id="desc" className={styles.checkbox} />
-                <label for="desc" className="rel" />
+                <input
+                  type="checkbox"
+                  id="desc"
+                  className={styles.checkbox}
+                  checked={searchInDescription}
+                  onChange={() => setSearchInDescription((v) => !v)}
+                />
+                <label htmlFor="desc" className="rel" />
               </Container>
               <Container className={`inblock ${styles.middle}`}>
-                <label for="desc" className={styles.labelText}>
+                <label htmlFor="desc" className={styles.labelText}>
                   szukaj również w opisach
                 </label>
               </Container>
@@ -59,11 +67,17 @@ export const BrowseContainer = () => {
 
             <Container className={`rel ${styles.checkboxWrapper}`}>
               <Container className={`inblock ${styles.middle}`}>
-                <input type="checkbox" id="photoOnly" className={styles.checkbox} />
-                <label for="photoOnly" className="rel" />
+                <input
+                  type="checkbox"
+                  id="photoOnly"
+                  className={styles.checkbox}
+                  checked={photoOnly}
+                  onChange={() => setPhotoOnly((v) => !v)}
+                />
+                <label htmlFor="photoOnly" className="rel" />
               </Container>
               <Container className={`inblock ${styles.middle}`}>
-                <label for="photoOnly" className={styles.labelText}>
+                <label htmlFor="photoOnly" className={styles.labelText}>
                   tylko ze zdjęciem
                 </label>
               </Container>
@@ -71,11 +85,17 @@ export const BrowseContainer = () => {
 
             <Container className={`rel ${styles.checkboxWrapper}`}>
               <Container className={`inblock ${styles.middle}`}>
-                <input type="checkbox" id="delivery" className={styles.checkbox} />
-                <label for="delivery" className="rel" />
+                <input
+                  type="checkbox"
+                  id="delivery"
+                  className={styles.checkbox}
+                  checked={withDelivery}
+                  onChange={() => setWithDelivery((v) => !v)}
+                />
+                <label htmlFor="delivery" className="rel" />
               </Container>
               <Container className={`inblock ${styles.middle}`}>
-                <label for="delivery" className={styles.labelText}>
+                <label htmlFor="delivery" className={styles.labelText}>
                   <span className={styles.delivery} role="img" aria-label="delivery" />
                   tylko z przesyłką OLX
                 </label>

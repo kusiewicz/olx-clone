@@ -15,7 +15,7 @@ const HoverButton = ({ className, children, ariaLabel, tabIndex, color }) => (
 
 HoverButton.propTypes = {
   className: PropTypes.string,
-  children: PropTypes.string,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   ariaLabel: PropTypes.string,
   tabIndex: PropTypes.number,
   color: PropTypes.string,
