@@ -26,8 +26,11 @@
   border-right: 1px solid v.$backgroundGrey;
 }
 
-.locationContainer {
+.locationRefContainer {
   width: 26%;
+}
+
+.locationContainer {
   border-right: 1px solid v.$backgroundGrey;
 }
 
@@ -43,13 +46,12 @@
   width: 60%;
 }
 
-.refContainer {
+.distanceRefContainer {
   width: 11%;
 }
 
 .distanceContainer {
   @extend %inputFields;
-  position: relative;
   justify-content: space-around;
   align-items: center;
   border-right: 1px solid v.$backgroundGrey;
@@ -68,7 +70,58 @@
   margin-left: 2px;
 }
 
-.dropdown {
+.locationDropdown {
+  position: absolute;
+  width: 100%;
+  border: 1px solid #f2f4f5;
+  top: 72px;
+  z-index: 5;
+  animation: droplist 0.25s ease-in;
+}
+
+.listItem {
+  color: v.$darkGreen;
+  padding: 8px 17px;
+  font-family: Geomanist-Regular;
+  width: 80%;
+
+  &:hover {
+    color: white !important;
+    background-color: v.$darkGreen;
+  }
+
+  @media (max-width: 1440px) {
+    width: 78%;
+  }
+}
+
+.voivodContainer {
+  background-color: white;
+  width: 100%;
+
+  &:hover {
+    background-color: v.$darkGreen;
+
+    .listItem,
+    .cityIcon {
+      color: white;
+    }
+  }
+}
+
+.dropdownRight {
+  position: absolute;
+  width: 250px;
+  right: -250px;
+  top: -17px;
+  background-color: white;
+
+  .listItem {
+    width: 100%;
+  }
+}
+
+.distanceDropdown {
   position: absolute;
   width: 100%;
   border: 1px solid #f2f4f5;

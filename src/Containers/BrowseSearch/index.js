@@ -1,9 +1,14 @@
-import React, { useState } from 'react';
+/* eslint-disable */
+import React, { useState, useRef } from 'react';
 import { useHistory } from 'react-router-dom';
+import { v4 as uuidv4 } from 'uuid';
 import propTypes from 'prop-types';
+import styles from './styles.module.scss';
+
 import { Container, SearchBox, Icon, HoverButton } from '../../Components';
 import { useComponentVisibility } from '../../Hooks';
-import styles from './styles.module.scss';
+
+import voivodeshipsData from '../../Fixtures/cities.json';
 
 export const BrowseSearchContainer = ({
   searchTerm = '',
@@ -12,9 +17,23 @@ export const BrowseSearchContainer = ({
   setLocationTerm,
   link,
 }) => {
-  const [distance, setDistance] = useState(0);
-  const { isVisible, setIsVisible, ref } = useComponentVisibility(false, 'click');
   const history = useHistory();
+  const [distance, setDistance] = useState(0);
+  const distances = [0, 5, 10, 15, 30, 50, 75, 100];
+
+  const { isVisible: isDistanceVisible, ref: distanceRef } = useComponentVisibility(false, 'click');
+  const { isVisible: isLocationVisible, ref: locationRef } = useComponentVisibility(false, 'click');
+
+  const showCities = (cities) => {
+    <li role="option" className={`inblock ${styles.listItem}`}>
+      Cała Polska
+    </li>;
+    cities.map((city) => (
+      <li role="option" className={`inblock ${styles.listItem}`}>
+        {city}
+      </li>
+    ));
+  };
 
   return (
     <>
@@ -27,97 +46,73 @@ export const BrowseSearchContainer = ({
           setText={(value) => setSearchTerm(value)}
         />
 
-        <SearchBox
-          boxClassName={styles.locationContainer}
-          inputClassName={styles.locationField}
-          value={locationTerm}
-          placeholder="Cała Polska"
-          setText={(value) => setLocationTerm(value)}
-        >
-          <Icon className={`icon-location-outline ${styles.locationIcon}`} role="presentation" />
-        </SearchBox>
+        <div className={`rel ${styles.locationRefContainer}`} ref={locationRef}>
+          <Container className={`rel ${styles.locationContainer}`}>
+            <SearchBox
+              inputClassName={styles.locationField}
+              value={locationTerm}
+              placeholder="Cała Polska"
+              setText={(value) => setLocationTerm(value)}
+            >
+              <Icon
+                className={`icon-location-outline ${styles.locationIcon}`}
+                role="presentation"
+              />
+            </SearchBox>
 
-        <div className={`${styles.refContainer}`} ref={ref}>
-          <Container className={`flex ${styles.distanceContainer}`}>
+            {isLocationVisible && (
+              <Container role="listbox" className={styles.locationDropdown}>
+                <Container className={styles.dropdownLeft}>
+                  {voivodeshipsData.map((item) => (
+                    <>
+                      <Container className={`rel ${styles.voivodContainer}`}>
+                        <li
+                          role="option"
+                          className={`inblock ${styles.listItem}`}
+                          key={uuidv4()}
+                          onClick={() => setLocationTerm(item.name)}
+                        >
+                          {item.name}
+                        </li>
+                        <Icon
+                          role="presentation"
+                          className={`inblock icon-right-open-big ${styles.cityIcon}`}
+                        />
+                      </Container>
+                    </>
+                  ))}
+                </Container>
+                <Container className={styles.dropdownRight}>
+                  {voivodeshipsData.map(
+                    (item) =>
+                      item.cities &&
+                      item.cities.map((city) => (
+                        <>
+                          <li role="option" className={`inblock ${styles.listItem}`} key={uuidv4()}>
+                            {city}
+                          </li>
+                        </>
+                      ))
+                  )}
+                </Container>
+              </Container>
+            )}
+          </Container>
+        </div>
+
+        <div className={`${styles.distanceRefContainer}`} ref={distanceRef}>
+          <Container className={`flex rel ${styles.distanceContainer}`}>
             <h4 className={styles.distance}>{`+ ${distance} km`}</h4>
             <Icon className={`icon-down-open-big ${styles.arrowIcon}`} role="presentation" />
-            {isVisible && (
-              <Container role="menu" className={styles.dropdown}>
-                <li role="menuitem" onClick={() => setDistance(0)}>
-                  + 0 km
-                </li>
-                <li
-                  role="menuitem"
-                  onClick={() => {
-                    setDistance(2);
-                    setIsVisible(false);
-                  }}
-                >
-                  + 2 km
-                </li>
-                <li
-                  role="menuitem"
-                  onClick={() => {
-                    setDistance(5);
-                    setIsVisible(false);
-                  }}
-                >
-                  + 5 km
-                </li>
-                <li
-                  role="menuitem"
-                  onClick={() => {
-                    setDistance(10);
-                    setIsVisible(false);
-                  }}
-                >
-                  + 10 km
-                </li>
-                <li
-                  role="menuitem"
-                  onClick={() => {
-                    setDistance(15);
-                    setIsVisible(false);
-                  }}
-                >
-                  + 15 km
-                </li>
-                <li
-                  role="menuitem"
-                  onClick={() => {
-                    setDistance(30);
-                    setIsVisible(false);
-                  }}
-                >
-                  + 30 km
-                </li>
-                <li
-                  role="menuitem"
-                  onClick={() => {
-                    setDistance(50);
-                    setIsVisible(false);
-                  }}
-                >
-                  + 50 km
-                </li>
-                <li
-                  role="menuitem"
-                  onClick={() => {
-                    setDistance(75);
-                    setIsVisible(false);
-                  }}
-                >
-                  + 75 km
-                </li>
-                <li
-                  role="menuitem"
-                  onClick={() => {
-                    setDistance(100);
-                    setIsVisible(false);
-                  }}
-                >
-                  + 100 km
-                </li>
+            {isDistanceVisible && (
+              <Container role="listbox" className={styles.distanceDropdown}>
+                {distances.map((item) => (
+                  <li
+                    role="option"
+                    aria-selected={distance === item}
+                    onClick={() => setDistance(item)}
+                  >{`+ ${item} km`}</li>
+                ))}
               </Container>
             )}
           </Container>

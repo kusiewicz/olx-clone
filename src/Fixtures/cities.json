@@ -1,0 +1,65 @@
+[
+    {
+      "name": "Cała Polska"
+    },
+    {
+      "name": "Dolnośląskie",
+      "cities": ["Wrocław", "Wałbrzych"]
+    },
+    {
+      "name": "Lubelskie",
+      "cities": ["Lublin", "Puławy"]
+    },
+    {
+      "name": "Lubuskie",
+      "cities": ["Zielona Góra", "Opoczno"]
+    },
+    {
+      "name": "Łódzkie",
+      "cities": ["Łódź", "Radomsko"]
+    },
+    {
+      "name": "Małopolskie",
+      "cities": ["Kraków", "Tarnów"]
+    },
+    {
+      "name": "Mazowieckie",
+      "cities": ["Warszawa", "Radom"]
+    },
+    {
+      "name": "Opolskie",
+      "cities": ["Opole", "Breg"]
+    },
+    {
+      "name": "Podkarpackie",
+      "cities": ["Tarnobrzeg", "Dębica"]
+    },
+    {
+      "name": "Podlaskie",
+      "cities": ["Łomża", "Białystok"]
+    },
+    {
+      "name": "Pomorskie",
+      "cities": ["Gdańsk", "Malbork"]
+    },
+    {
+      "name": "Śląskie",
+      "cities": ["Bielsko-Biała", "Katowice"]
+    },
+    {
+      "name": "Świętokrzyskie",
+      "cities": ["Kielce", "Sandomierz"]
+    },
+    {
+      "name": "Warmińsko-Mazurskie",
+      "cities": ["Elbląg", "Olsztyn"]
+    },
+    {
+      "name": "Wielkopolskie",
+      "cities": ["Gostyń", "Poznań"]
+    },
+    {
+      "name": "Zachodniopomorskie",
+      "cities": ["Szczecin", "Kołobrzeg"]
+    }
+  ]

@@ -7,11 +7,10 @@ const useComponentVisibility = (initialState, userEvent) => {
   const toggleVisibility = (event) => {
     if (event.type === userEvent && !isVisible && ref.current.contains(event.target)) {
       setIsVisible(true);
-    } else if (event.type === userEvent && isVisible && !ref.current.contains(event.target)) {
+    } else if (event.type === userEvent && isVisible) {
       setIsVisible(false);
     }
   };
-
   useEffect(() => {
     document.addEventListener(userEvent, toggleVisibility);
 

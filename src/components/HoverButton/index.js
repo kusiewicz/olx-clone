@@ -2,16 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './styles.module.scss';
 
-const HoverButton = ({ className, children, ariaLabel, tabIndex, color }) => (
-  <div
-    className={`${color && styles[`${color}Btn`]} ${className}`}
-    role="button"
-    aria-label={ariaLabel}
-    tabIndex={tabIndex}
-  >
-    <span>{children}</span>
-  </div>
-);
+const HoverButton = ({ className, children, ariaLabel, tabIndex, color }) => {
+  const classes = `${color ? styles[`${color}Btn`] : ' '} ${className}`.trim(' ');
+
+  return (
+    <div className={classes} role="button" aria-label={ariaLabel} tabIndex={tabIndex}>
+      <span>{children}</span>
+    </div>
+  );
+};
 
 HoverButton.propTypes = {
   className: PropTypes.string,
