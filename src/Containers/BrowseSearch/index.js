@@ -78,22 +78,24 @@ export const BrowseSearchContainer = ({
                           role="presentation"
                           className={`inblock icon-right-open-big ${styles.cityIcon}`}
                         />
+
+                        <Container className={styles.citiesContainer}>
+                          {item.cities &&
+                            item.cities.map((city) => (
+                              <>
+                                <li
+                                  role="option"
+                                  className={`inblock ${styles.listItem}`}
+                                  key={uuidv4()}
+                                >
+                                  {city}
+                                </li>
+                              </>
+                            ))}
+                        </Container>
                       </Container>
                     </>
                   ))}
-                </Container>
-                <Container className={styles.dropdownRight}>
-                  {voivodeshipsData.map(
-                    (item) =>
-                      item.cities &&
-                      item.cities.map((city) => (
-                        <>
-                          <li role="option" className={`inblock ${styles.listItem}`} key={uuidv4()}>
-                            {city}
-                          </li>
-                        </>
-                      ))
-                  )}
                 </Container>
               </Container>
             )}

@@ -79,6 +79,17 @@
   animation: droplist 0.25s ease-in;
 }
 
+.dropdownLeft {
+  height: 300px;
+  overflow-y: scroll;
+  padding-right: 250px;
+  margin-right: -250px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 .listItem {
   color: v.$darkGreen;
   padding: 8px 17px;
@@ -99,6 +110,10 @@
   background-color: white;
   width: 100%;
 
+  .citiesContainer {
+    display: none;
+  }
+
   &:hover {
     background-color: v.$darkGreen;
 
@@ -106,15 +121,23 @@
     .cityIcon {
       color: white;
     }
+
+    .citiesContainer {
+      display: inline-block;
+
+      .listItem {
+        color: v.$darkGreen;
+      }
+    }
   }
 }
 
-.dropdownRight {
+.citiesContainer {
   position: absolute;
-  width: 250px;
-  right: -250px;
-  top: -17px;
+  width: 220px;
+  right: -220px;
   background-color: white;
+  bottom: -17px;
 
   .listItem {
     width: 100%;
