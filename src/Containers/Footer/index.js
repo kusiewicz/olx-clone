@@ -5,7 +5,7 @@ import { Container } from '../../Components';
 
 export const FooterContainer = () => (
   <Container id="footer" className={`indent ${styles.footerContainer}`}>
-    <Container className={`inblock ${styles.pointsLeft}`}>
+    <Container className="inblock">
       <ul className={styles.footerList}>
         <li className={styles.footerPoint}>
           <a href="https://www.olx.pl/lp/mobilne/">Aplikacje mobilne OLX.pl </a>
@@ -36,7 +36,7 @@ export const FooterContainer = () => (
         </li>
       </ul>
     </Container>
-    <Container className={`inblock ${styles.pointsRight}`}>
+    <Container className="inblock">
       <ul className={styles.footerList}>
         <li className={styles.footerPoint}>
           <a href="https://www.olx.pl/jak-dziala-olx/">Jak działa OLX.pl </a>

@@ -24,16 +24,6 @@ export const BrowseSearchContainer = ({
   const { isVisible: isDistanceVisible, ref: distanceRef } = useComponentVisibility(false, 'click');
   const { isVisible: isLocationVisible, ref: locationRef } = useComponentVisibility(false, 'click');
 
-  const showCities = (cities) => {
-    <li role="option" className={`inblock ${styles.listItem}`}>
-      Cała Polska
-    </li>;
-    cities.map((city) => (
-      <li role="option" className={`inblock ${styles.listItem}`}>
-        {city}
-      </li>
-    ));
-  };
 
   return (
     <>
@@ -87,6 +77,7 @@ export const BrowseSearchContainer = ({
                                   role="option"
                                   className={`inblock ${styles.listItem}`}
                                   key={uuidv4()}
+                                  onClick={() => setLocationTerm(city)}
                                 >
                                   {city}
                                 </li>
