@@ -73,3 +73,5 @@ export const JumbotronContainer = () => (
     </Container>
   </Container>
 );
+
+export default JumbotronContainer;

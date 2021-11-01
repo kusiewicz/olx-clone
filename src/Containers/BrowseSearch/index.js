@@ -24,7 +24,6 @@ export const BrowseSearchContainer = ({
   const { isVisible: isDistanceVisible, ref: distanceRef } = useComponentVisibility(false, 'click');
   const { isVisible: isLocationVisible, ref: locationRef } = useComponentVisibility(false, 'click');
 
-
   return (
     <>
       <Container id="search" className={`flex cntr ${styles.searchSectionContainer}`}>
@@ -132,3 +131,5 @@ BrowseSearchContainer.propTypes = {
   setLocationTerm: propTypes.func,
   link: propTypes.string,
 };
+
+export default BrowseSearchContainer;

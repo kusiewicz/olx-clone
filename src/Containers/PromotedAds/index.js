@@ -48,3 +48,5 @@ export const PromotedAdsContainer = () => (
     </Container>
   </Container>
 );
+
+export default PromotedAdsContainer;

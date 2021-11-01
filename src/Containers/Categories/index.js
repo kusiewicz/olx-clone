@@ -94,3 +94,5 @@ export const CategoriesContainer = () => {
     </Container>
   );
 };
+
+export default CategoriesContainer;

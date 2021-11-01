@@ -62,3 +62,5 @@ export const HomeSearchContainer = () => {
     </>
   );
 };
+
+export default HomeSearchContainer;
