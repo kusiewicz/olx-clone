@@ -17,6 +17,7 @@ const SearchBox = ({ boxClassName, inputClassName, value, placeholder, setText, 
         role="button"
         tabIndex={0}
         aria-label="Wyczyść pole wyszukiwania"
+        name="clear"
         onClick={() => setText('')}
       />
     )}

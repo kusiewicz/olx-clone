@@ -7,14 +7,13 @@ const Category = ({ category, src, className, onClick }) => (
     <div
       className={styles.CategoryContainer}
       role="button"
-      aria-label="Pokaż kategorię"
       onClick={onClick}
+      aria-label="Pokaż kategorię"
+      name="Pokaż kategorię"
       tabIndex={0}
     >
       <img alt={category} className={`${className}`} src={src} />
-      <span href="s" className={styles.caption}>
-        {category}
-      </span>
+      <span className={styles.caption}>{category}</span>
     </div>
   </>
 );
