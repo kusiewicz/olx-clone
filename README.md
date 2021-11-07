@@ -1,6 +1,6 @@
 # olx-clone
 
-A 1:1 clone of www.olx.pl built with React (~in progress, the progress in the photo below). 
+A 1:1 clone of www.olx.pl built with React (~in progress, demo in the photo below). 
 
 
 
